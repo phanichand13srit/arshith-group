@@ -1,5 +1,4 @@
 const express = require('express');
-const sqlite3 = require('sqlite3').verbose();
 const cors = require('cors');
 const multer = require('multer');
 const path = require('path');
@@ -11,6 +10,7 @@ const app = express();
 app.use(cors());
 app.use(express.json()); // Parses JSON data
 app.use(express.urlencoded({ extended: true }));
+
 // Ensure uploads folder exists (dynamically configured for local and Vercel)
 let uploadsDir = path.join(__dirname, 'uploads');
 if (process.env.VERCEL) {
@@ -24,97 +24,51 @@ if (!fs.existsSync(uploadsDir)) {
 app.use('/uploads', express.static(uploadsDir)); // Serves uploaded resumes publicly
 app.use('/api/uploads', express.static(uploadsDir)); // Serves uploaded resumes under Vercel API routing
 
-// Database Connection Setup (SQLite optimized for local and Vercel)
-let dbPath = path.join(__dirname, 'arshith_group_db.db');
+// JSON-based Portable Database connection setup (optimized for serverless environment)
+let dbPath = path.join(__dirname, 'arshith_group_db.json');
 if (process.env.VERCEL) {
-    dbPath = path.join('/tmp', 'arshith_group_db.db');
+    dbPath = path.join('/tmp', 'arshith_group_db.json');
 }
 
-const db = new sqlite3.Database(dbPath, (err) => {
-    if (err) {
-        console.error('Error connecting to SQLite database:', err.message);
-    } else {
-        console.log('Connected to the SQLite database (arshith_group_db.db).');
-        initializeDatabase();
+// Helper to read database
+function readDb() {
+    try {
+        if (!fs.existsSync(dbPath)) {
+            const initialData = {
+                contacts: [],
+                internship_roles: [
+                    { id: 1, role_key: "software-dev-intern-3", role_display_name: "Software & Web Development Intern - 3 Months" },
+                    { id: 2, role_key: "software-dev-intern-6", role_display_name: "Software & Web Development Intern - 6 Months" },
+                    { id: 3, role_key: "ecommerce-ops-intern-3", role_display_name: "E-Commerce Operations Intern - 3 Months" },
+                    { id: 4, role_key: "ecommerce-ops-intern-6", role_display_name: "E-Commerce Operations Intern - 6 Months" }
+                ],
+                applications: [],
+                admins: [
+                    { id: 1, username: "admin", password: "admin123" }
+                ]
+            };
+            fs.writeFileSync(dbPath, JSON.stringify(initialData, null, 4));
+            return initialData;
+        }
+        const content = fs.readFileSync(dbPath, 'utf8');
+        return JSON.parse(content);
+    } catch (err) {
+        console.error("Error reading JSON database:", err);
+        return { contacts: [], internship_roles: [], applications: [], admins: [] };
     }
-});
-
-function initializeDatabase() {
-    db.serialize(() => {
-        // 1. Create contacts table
-        db.run(`
-            CREATE TABLE IF NOT EXISTS contacts (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                name TEXT NOT NULL,
-                email TEXT NOT NULL,
-                subject TEXT NOT NULL,
-                message TEXT NOT NULL,
-                created_at TEXT DEFAULT CURRENT_TIMESTAMP
-            )
-        `);
-
-        // 2. Create internship_roles table
-        db.run(`
-            CREATE TABLE IF NOT EXISTS internship_roles (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                role_key TEXT NOT NULL UNIQUE,
-                role_display_name TEXT NOT NULL
-            )
-        `, (err) => {
-            if (!err) seedRoles();
-        });
-
-        // 3. Create applications table
-        db.run(`
-            CREATE TABLE IF NOT EXISTS applications (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                full_name TEXT NOT NULL,
-                email TEXT NOT NULL,
-                phone TEXT NOT NULL,
-                role_id INTEGER NOT NULL,
-                resume_path TEXT,
-                why_join TEXT,
-                created_at TEXT DEFAULT CURRENT_TIMESTAMP,
-                FOREIGN KEY (role_id) REFERENCES internship_roles(id) ON DELETE CASCADE
-            )
-        `);
-
-        // 4. Create admins table
-        db.run(`
-            CREATE TABLE IF NOT EXISTS admins (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                username TEXT NOT NULL UNIQUE,
-                password TEXT NOT NULL
-            )
-        `, (err) => {
-            if (!err) seedAdmin();
-        });
-    });
 }
 
-function seedRoles() {
-    db.get("SELECT COUNT(*) as count FROM internship_roles", [], (err, row) => {
-        if (!err && row && row.count === 0) {
-            const stmt = db.prepare("INSERT INTO internship_roles (role_key, role_display_name) VALUES (?, ?)");
-            stmt.run("software-dev-intern-3", "Software & Web Development Intern - 3 Months");
-            stmt.run("software-dev-intern-6", "Software & Web Development Intern - 6 Months");
-            stmt.run("ecommerce-ops-intern-3", "E-Commerce Operations Intern - 3 Months");
-            stmt.run("ecommerce-ops-intern-6", "E-Commerce Operations Intern - 6 Months");
-            stmt.finalize();
-            console.log("✓ Internship roles seeded successfully.");
-        }
-    });
+// Helper to write database
+function writeDb(data) {
+    try {
+        fs.writeFileSync(dbPath, JSON.stringify(data, null, 4));
+    } catch (err) {
+        console.error("Error writing JSON database:", err);
+    }
 }
 
-function seedAdmin() {
-    db.get("SELECT COUNT(*) as count FROM admins", [], (err, row) => {
-        if (!err && row && row.count === 0) {
-            db.run("INSERT INTO admins (username, password) VALUES (?, ?)", ["admin", "admin123"], (err) => {
-                if (!err) console.log("✓ Default admin seeded (admin/admin123).");
-            });
-        }
-    });
-}
+// Auto-initialize DB on server start
+readDb();
 
 // Configure File Uploads (Multer) - Only allow PDFs and keep extension
 const storage = multer.diskStorage({
@@ -152,11 +106,22 @@ app.use((err, req, res, next) => {
 app.post('/api/contact', (req, res) => {
     const { name, email, subject, message } = req.body;
     
-    const query = 'INSERT INTO contacts (name, email, subject, message) VALUES (?, ?, ?, ?)';
-    db.run(query, [name, email, subject, message], (err) => {
-        if (err) return res.status(500).json({ error: err.message });
+    try {
+        const dbData = readDb();
+        const newContact = {
+            id: Date.now(),
+            name: name || '',
+            email: email || '',
+            subject: subject || '',
+            message: message || '',
+            created_at: new Date().toISOString()
+        };
+        dbData.contacts.push(newContact);
+        writeDb(dbData);
         res.status(200).json({ message: 'Contact message saved successfully!' });
-    });
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
 });
 
 // 2. Endpoint for Internship Application (with Resume Upload)
@@ -164,71 +129,81 @@ app.post('/api/apply', upload.single('resumeUpload'), (req, res) => {
     const { fullName, email, phone, internshipRole, coverLetter } = req.body;
     const resumePath = req.file ? 'api/uploads/' + req.file.filename : null; 
     
-    // Find the role_id from internship_roles table using the key from frontend
-    const findRoleQuery = 'SELECT id FROM internship_roles WHERE role_key = ?';
-    
-    db.get(findRoleQuery, [internshipRole], (err, roleRow) => {
-        if (err) return res.status(500).json({ error: err.message });
+    try {
+        const dbData = readDb();
         
-        if (!roleRow) {
+        // Find internship role display name based on key
+        const role = dbData.internship_roles.find(r => r.role_key === internshipRole);
+        if (!role) {
             return res.status(400).json({ error: 'Invalid internship role selected.' });
         }
         
-        const roleId = roleRow.id;
+        // Check unique constraints for email or phone
+        const exists = dbData.applications.some(app => app.email === email || app.phone === phone);
+        if (exists) {
+            return res.status(400).json({ error: 'Email or Phone number already registered!' });
+        }
         
-        // Insert application using the roleId
-        const query = 'INSERT INTO applications (full_name, email, phone, role_id, resume_path, why_join) VALUES (?, ?, ?, ?, ?, ?)';
+        const newApplication = {
+            id: Date.now(),
+            full_name: fullName,
+            email: email,
+            phone: phone,
+            role_id: role.id,
+            resume_path: resumePath,
+            why_join: coverLetter || '',
+            created_at: new Date().toISOString()
+        };
         
-        db.run(query, [fullName, email, phone, roleId, resumePath, coverLetter], function(err) {
-            if (err) {
-                if (err.message.includes('UNIQUE') || err.code === 'SQLITE_CONSTRAINT') {
-                    return res.status(400).json({ error: 'Email or Phone number already registered!' });
-                }
-                return res.status(500).json({ error: err.message });
-            }
-            res.status(200).json({ message: 'Application submitted successfully!' });
-        });
-    });
+        dbData.applications.push(newApplication);
+        writeDb(dbData);
+        res.status(200).json({ message: 'Application submitted successfully!' });
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
 });
 
 // 3. Admin Login
 app.post('/api/login', (req, res) => {
     const { username, password } = req.body;
     
-    const query = 'SELECT * FROM admins WHERE username = ? AND password = ?';
-    db.get(query, [username, password], (err, row) => {
-        if (err) return res.status(500).json({ error: err.message });
+    try {
+        const dbData = readDb();
+        const admin = dbData.admins.find(a => a.username === username && a.password === password);
         
-        if (row) {
-            res.status(200).json({ message: 'Login successful', adminId: row.id });
+        if (admin) {
+            res.status(200).json({ message: 'Login successful', adminId: admin.id });
         } else {
             res.status(401).json({ error: 'Invalid username or password' });
         }
-    });
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
 });
 
 // 4. Fetch All Applications (For Dashboard)
 app.get('/api/admin/applications', (req, res) => {
-    const query = `
-        SELECT 
-            a.id, 
-            a.full_name, 
-            a.email, 
-            a.phone, 
-            r.role_display_name AS role, 
-            a.resume_path, 
-            a.why_join, 
-            a.created_at 
-        FROM applications a 
-        JOIN internship_roles r ON a.role_id = r.id 
-        ORDER BY a.created_at DESC`;
-        
-    db.all(query, [], (err, rows) => {
-        if (err) return res.status(500).json({ error: err.message });
-        res.status(200).json(rows);
-    });
+    try {
+        const dbData = readDb();
+        const enriched = dbData.applications.map(app => {
+            const role = dbData.internship_roles.find(r => r.id === app.role_id);
+            return {
+                id: app.id,
+                full_name: app.full_name,
+                email: app.email,
+                phone: app.phone,
+                role: role ? role.role_display_name : 'Unknown',
+                resume_path: app.resume_path,
+                why_join: app.why_join,
+                created_at: app.created_at
+            };
+        });
+        res.status(200).json(enriched);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
 });
 
 // Start the server
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
