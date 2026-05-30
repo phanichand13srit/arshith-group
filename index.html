@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arshit Group of Industries</title>
+    <meta name="description" content="Arshit Group of Industries - Innovation, sustainability, and growth across diverse sectors.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="light-mode">
+    <header class="header">
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span class="logo-text">Arshit</span><span class="logo-dot">.</span>
+            </a>
+            
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link" data-i18n="nav-home">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link" data-i18n="nav-about">About Us</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#business" class="nav-link"><span data-i18n="nav-business">Businesses</span> <svg class="dropdown-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="it-services.html" target="_blank" data-i18n="it-nav-link">IT Services & IT Consulting</a></li>
+                            <li><a href="ecommerce.html" target="_blank" data-i18n="ec-nav-link">E-Commerce</a></li>
+                            <li><a href="#">Multi sellers</a></li>
+                            <li><a href="business-consulting.html" target="_blank" data-i18n="bc-nav-link">Business Consulting & Services</a></li>
+                            <li><a href="#">Digital Marketing</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#news" class="nav-link"><span data-i18n="nav-news">News</span> <svg class="dropdown-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Press Releases</a></li>
+                            <li><a href="#">Company Updates</a></li>
+                            <li><a href="#">Media Kit</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#careers" class="nav-link"><span data-i18n="nav-careers">Careers</span> <svg class="dropdown-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Open Positions</a></li>
+                            <li><a href="#">Life at Arshit</a></li>
+                            <li><a href="internships.html">Internships</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link"><span data-i18n="nav-lang">Languages</span> <svg class="dropdown-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" class="lang-option" data-lang="en">English</a></li>
+                            <li><a href="#" class="lang-option" data-lang="te">తెలుగు (Telugu)</a></li>
+                            <li><a href="#" class="lang-option" data-lang="hi">हिंदी (Hindi)</a></li>
+                            <li><a href="#" class="lang-option" data-lang="kn">ಕನ್ನಡ (Kannada)</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="login.html" class="nav-link" style="color: var(--blue-light); font-weight: 600;">Admin Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <button id="theme-toggle" class="theme-btn" aria-label="Toggle Light/Dark Mode">
+                            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" style="position: relative; overflow: hidden; padding-bottom: 8rem;">
+            <!-- Background Video Loop -->
+            <div class="hero-video-bg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; overflow: hidden;">
+                <video autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
+                    <source src="images/heroclip.mp4" type="video/mp4">
+                </video>
+                <div class="hero-video-overlay"></div>
+            </div>
+            <div class="hero-content" style="position: relative; z-index: 1;">
+                <h1 data-i18n="hero-title">Driving Innovation,<br>Powering the Future</h1>
+                <p data-i18n="hero-desc">Welcome to Arshit Group of Industries. A diversified conglomerate committed to excellence, sustainability, and global growth.</p>
+            </div>
+        </section>
+
+        <!-- CEO & Founder Section -->
+        <section class="ceo-section reveal" id="about">
+            <div class="ceo-container">
+                <div class="ceo-image-wrapper">
+                    <div class="glass-card-bg"></div>
+                    <!-- Please save your uploaded photo into the 'images' folder and name it 'ceo.jpg' -->
+                    <img src="images/ceo.jpg" alt="CEO N Farook" class="ceo-image">
+                    <div class="ceo-badge">
+                        <span class="badge-title" data-i18n="about-badge">Founder & CEO</span>
+                    </div>
+                </div>
+                <div class="ceo-content">
+                    <h2 class="section-title" data-i18n="about-title">Visionary <span class="highlight">Leadership</span></h2>
+                    <div class="quote-box">
+                        <svg class="quote-icon" width="40" height="40" viewBox="0 0 24 24" fill="var(--yass-queen)" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.017 21L16.417 14.6C16.617 14.1 16.717 13.5 16.717 12.9V4.49997H22.717V12.9C22.717 16.3 20.817 19.3 17.617 21H14.017ZM3.01697 21L5.41697 14.6C5.61697 14.1 5.71697 13.5 5.71697 12.9V4.49997H11.717V12.9C11.717 16.3 9.81697 19.3 6.61697 21H3.01697Z" />
+                        </svg>
+                        <blockquote class="ceo-quote" data-i18n="about-quote">
+                            "True innovation doesn't just disrupt industries—it redefines the future. Our commitment is to build sustainable, forward-thinking solutions that empower communities and drive global progress."
+                        </blockquote>
+                        <p class="ceo-name">— N Farook</p>
+                    </div>
+                    <p class="ceo-description" data-i18n="about-desc">
+                        As the driving force behind the Arshit Group of Industries, his visionary leadership has transformed ideas into industry-leading enterprises. With a relentless focus on excellence and sustainable growth, the group continues to expand its global footprint across diverse sectors.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Company Information Overview Section -->
+        <section class="services-section reveal" style="padding: 6rem 5%; background: rgba(0,0,0,0.02); border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);">
+            <div class="container" style="max-width: 1200px; margin: 0 auto;">
+                <h2 class="section-title text-center" style="margin-bottom: 3.5rem;">Corporate <span class="highlight">Overview</span></h2>
+                <div class="services-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem;">
+                    <!-- Card 1 -->
+                    <div class="service-card" style="text-align: left; padding: 2.5rem 2rem;">
+                        <div class="service-icon blue" style="margin: 0 0 1.5rem 0;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+                        <h3 style="font-size: 1.3rem; margin-bottom: 1rem;">Arshith Fresh</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Our premier e-commerce and certified organic agricultural arm. Leveraging custom logistical networks to source pure organic items like avocados, honey, and olive oils directly from farms to green digital storefronts.</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="service-card" style="text-align: left; padding: 2.5rem 2rem;">
+                        <div class="service-icon pink" style="margin: 0 0 1.5rem 0;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></div>
+                        <h3 style="font-size: 1.3rem; margin-bottom: 1rem;">Arshith Infotech</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Pioneering enterprise IT support, custom software architecture, digital marketing strategies, and highly secure multi-vendor digital platforms for corporate divisions globally.</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="service-card" style="text-align: left; padding: 2.5rem 2rem;">
+                        <div class="service-icon purple" style="margin: 0 0 1.5rem 0;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div>
+                        <h3 style="font-size: 1.3rem; margin-bottom: 1rem;">Suntech Solutions</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Our high-level business consulting and advisory arm. Directing restructuring programs, managing operational workflows, auditing risk management profiles, and scaling corporate ROI metrics.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Awards & Recognition Section -->
+        <section class="awards-section reveal" id="awards" style="position: relative; overflow: hidden; padding: 6rem 5%; background: var(--bg-color); border-bottom: 1px solid var(--glass-border);">
+            <!-- Background Blend Graphic -->
+            <div class="fan-zone-blend-bg">
+                <img src="images/awards_bg.png" alt="Global Recognition & Awards" class="fan-zone-bg-img">
+                <div class="awards-overlay-gradient"></div>
+            </div>
+            
+            <div class="container" style="position: relative; z-index: 1; max-width: 1200px; margin: 0 auto; text-align: center;">
+                <h2 class="section-title text-center" data-i18n="awards-title">Global <span class="highlight">Recognition</span> & Awards</h2>
+                <p class="section-subtitle text-center" data-i18n="awards-subtitle" style="max-width: 700px; margin: -1rem auto 3.5rem auto; color: var(--text-muted); line-height: 1.6;">Our dedication to excellence, innovation, and sustainability has been recognized by industry leaders worldwide.</p>
+                
+                <div class="awards-grid">
+                    <!-- Award 1 -->
+                    <div class="award-card">
+                        <div class="award-glow"></div>
+                        <div class="award-badge-icon-filled">
+                            <img src="images/global_excellence_award.jpg" alt="Global Excellence Award" class="award-badge-img-filled">
+                        </div>
+                        <h3 data-i18n="award1-title">Global Excellence Award 2025</h3>
+                        <p data-i18n="award1-desc">Recognized as the 'Best Sustainable E-Commerce Platform' for driving green supply chains.</p>
+                    </div>
+
+                    <!-- Award 2 -->
+                    <div class="award-card">
+                        <div class="award-glow"></div>
+                        <div class="award-badge-icon-filled">
+                            <img src="images/tech_innovator_laurels.webp" alt="Tech Innovator Laurels" class="award-badge-img-filled">
+                        </div>
+                        <h3 data-i18n="award2-title">Tech Innovator Laurels</h3>
+                        <p data-i18n="award2-desc">Awarded for 'Outstanding Enterprise Software Architecture' and cloud infrastructure.</p>
+                    </div>
+
+                    <!-- Award 3 -->
+                    <div class="award-card">
+                        <div class="award-glow"></div>
+                        <div class="award-badge-icon-filled">
+                            <img src="images/advisory_of_the_year.png" alt="Advisory of the Year" class="award-badge-img-filled">
+                        </div>
+                        <h3 data-i18n="award3-title">Advisory of the Year</h3>
+                        <p data-i18n="award3-desc">Honored for 'Top Business Scaling Strategy' and maximizing client operational efficiency.</p>
+                    </div>
+
+                    <!-- Award 4 -->
+                    <div class="award-card">
+                        <div class="award-glow"></div>
+                        <div class="award-badge-icon-filled">
+                            <img src="images/green_enterprise_medal.jpg" alt="Green Enterprise Medal" class="award-badge-img-filled">
+                        </div>
+                        <h3 data-i18n="award4-title">Green Enterprise Medal</h3>
+                        <p data-i18n="award4-desc">Awarded for integrating 100% certified eco-friendly and organic supply chain solutions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Redesigned Companies/Portfolio Section: AI Meets the Court (Match Centre Inspired) -->
+        <section class="companies-section reveal" id="business">
+            <div class="portfolio-container">
+                <h2 class="section-title text-center" data-i18n="portfolio-title">AI Meets <span class="highlight">The Court</span></h2>
+                
+                <div class="match-centre-layout">
+                    <!-- Left: Interactive Accordion Menu -->
+                    <div class="match-centre-menu">
+                        <!-- Division 1 -->
+                        <div class="mc-menu-item active" data-target="fresh">
+                            <div class="mc-item-header">
+                                <span class="mc-item-title">ARSHITH FRESH (E-COMMERCE)</span>
+                                <span class="mc-item-status-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span>
+                            </div>
+                            <div class="mc-item-body">
+                                <p data-i18n="it-srv-ec-desc">End-to-end e-commerce solutions, from platform development to multi-vendor management and secure payments.</p>
+                                <a href="ecommerce.html" class="portfolio-card-link" target="_blank"><span data-i18n="portfolio-link">Visit Website</span> ↗</a>
+                            </div>
+                        </div>
+
+                        <!-- Division 2 -->
+                        <div class="mc-menu-item" data-target="infotech">
+                            <div class="mc-item-header">
+                                <span class="mc-item-title">ARSHIT INFOTECH (IT SERVICES)</span>
+                                <span class="mc-item-status-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
+                            </div>
+                            <div class="mc-item-body">
+                                <p data-i18n="it-hero-desc">Expanding your horizons with cutting-edge IT services and consulting.</p>
+                                <a href="it-services.html" class="portfolio-card-link" target="_blank"><span data-i18n="portfolio-link">Visit Website</span> ↗</a>
+                            </div>
+                        </div>
+
+                        <!-- Division 3 -->
+                        <div class="mc-menu-item" data-target="suntech">
+                            <div class="mc-item-header">
+                                <span class="mc-item-title">SUNTECH SOLUTIONS (CONSULTING)</span>
+                                <span class="mc-item-status-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
+                            </div>
+                            <div class="mc-item-body">
+                                <p data-i18n="bc-hero-desc">Expert consulting services designed to optimize operations, navigate challenges, and accelerate success.</p>
+                                <a href="business-consulting.html" class="portfolio-card-link" target="_blank"><span data-i18n="portfolio-link">Visit Website</span> ↗</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Dynamic 3D Tactical Glass Court Preview -->
+                    <div class="match-centre-preview-panel">
+                        <!-- Court Graphic Background with Glowing lines -->
+                        <div class="court-visualizer-container">
+                            <div class="court-grid-lines"></div>
+                            
+                            <!-- Preview Slide for Arshith Fresh -->
+                            <div class="court-preview-slide active" id="preview-fresh">
+                                <div class="court-glow-orb glow-green"></div>
+                                <div class="court-digital-card">
+                                    <div class="court-card-header">
+                                        <img src="images/arshith_fresh.png" alt="Arshith Fresh" class="court-preview-logo">
+                                    </div>
+                                    <div class="court-stats">
+                                        <div class="stat-row">
+                                            <span>Active Vendors</span>
+                                            <strong class="text-green">5,240+</strong>
+                                        </div>
+                                        <div class="stat-row">
+                                            <span>Transactions</span>
+                                            <strong class="text-green">99.98% Sec</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Preview Slide for Arshit Infotech -->
+                            <div class="court-preview-slide" id="preview-infotech">
+                                <div class="court-glow-orb glow-blue"></div>
+                                <div class="court-digital-card">
+                                    <div class="court-card-header">
+                                        <img src="images/arshithinfotech.png" alt="Arshit Infotech" class="court-preview-logo">
+                                    </div>
+                                    <div class="court-stats">
+                                        <div class="stat-row">
+                                            <span>SLA Delivery Rate</span>
+                                            <strong class="text-blue">98.6%</strong>
+                                        </div>
+                                        <div class="stat-row">
+                                            <span>Active Engineers</span>
+                                            <strong class="text-blue">1,200+</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Preview Slide for Suntech Solutions -->
+                            <div class="court-preview-slide" id="preview-suntech">
+                                <div class="court-glow-orb glow-purple"></div>
+                                <div class="court-digital-card">
+                                    <div class="court-card-header">
+                                        <img src="images/suntech_solutions.png" alt="Suntech Solutions" class="court-preview-logo">
+                                    </div>
+                                    <div class="court-stats">
+                                        <div class="stat-row">
+                                            <span>Client Growth Index</span>
+                                            <strong class="text-purple">+34% YoY</strong>
+                                        </div>
+                                        <div class="stat-row">
+                                            <span>Consulting Hours</span>
+                                            <strong class="text-purple">18,500+</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Section: Sustainable Innovation (The Arshith Fan Zone) -->
+        <section class="fan-zone-section reveal">
+            <!-- Background Blend City & Sky Graphic -->
+            <div class="fan-zone-blend-bg">
+                <img src="images/fan_zone.png" alt="Futuristic City Grid" class="fan-zone-bg-img">
+                <div class="fan-zone-overlay-gradient"></div>
+            </div>
+            
+            <div class="fan-zone-container">
+                <div class="fan-zone-header">
+                    <div class="carbon-neutral-badge-wrapper">
+                        <div class="carbon-neutral-badge">
+                            <span class="badge-ring"></span>
+                            <span class="badge-text">ARSHITH<br>FRESH<br>ORGANIC<br>ECO ZONE</span>
+                        </div>
+                    </div>
+                    <div class="fan-zone-header-content">
+                        <h2 class="fan-zone-title">SUSTAINABLE INNOVATION:<br>THE ARSHITH FRESH PORTAL</h2>
+                        <p class="fan-zone-subtitle">Join us in driving completely sustainable, green and organic supply chains globally. Backed by Arshith Fresh's state-of-the-art e-commerce engine, our Eco Zone leverages eco-friendly technology and local farm networking to bring clean, healthy organic products right to your storefront.</p>
+                    </div>
+                </div>
+
+                <div class="fan-zone-grid">
+                    <!-- Fan Zone Feature 1 -->
+                    <div class="fan-feature-card">
+                        <video class="fan-feature-video" autoplay loop muted playsinline>
+                            <source src="images/organic_freshness.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <h3>100% Certified Organic Freshness</h3>
+                        <p>Bridging local organic farmers directly with digital multi-seller marketplaces, ensuring zero carbon waste and pesticide-free supply loops.</p>
+                    </div>
+
+                    <!-- Fan Zone Feature 2 -->
+                    <div class="fan-feature-card">
+                        <video class="fan-feature-video" autoplay loop muted playsinline>
+                            <source src="images/digital_logistics.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <h3>Smart Digital Logistics & Tracking</h3>
+                        <p>Powered by Arshith Infotech's scalable cloud servers, we automate inventory loops, route-optimizations, and real-time delivery tracking.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Section: Nurturing Innovation (Arshit Springboard) -->
+        <section class="springboard-section reveal">
+            <div class="springboard-container">
+                <div class="springboard-split">
+                    <!-- Left: Educational Content -->
+                    <div class="springboard-content-panel">
+                        <h2 class="springboard-title">NURTURING INNOVATION: ARSHIT SPRINGBOARD</h2>
+                        <p class="springboard-desc">In partnership with leading tech institutes, we are bridging the digital divide to inspire the next generation of technologists. The Future Leaders program invites students behind the scenes of our global operations, offering a hands-on look at the AI and digital tools powering our enterprise.</p>
+                    </div>
+                    <!-- Right: Large Campus Image Banner -->
+                    <div class="springboard-image-panel">
+                        <div class="springboard-img-wrapper">
+                            <img src="images/springboard.png" alt="Arshit Springboard Campus" class="springboard-img">
+                            <div class="springboard-image-glow"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Section: Partner with Arshith AI Tech -->
+        <section class="partner-ai-section reveal" id="partner-ai">
+            <!-- Background Video Loop -->
+            <div class="partner-video-bg">
+                <video autoplay loop muted playsinline class="partner-bg-video">
+                    <source src="images/277093_medium.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="partner-video-overlay"></div>
+            </div>
+
+            <div class="partner-ai-container">
+                <div class="partner-ai-glass-card">
+                    <span class="tracking-tag" data-i18n="partner-tag">COLLABORATION</span>
+                    <h2 class="partner-ai-title" data-i18n="partner-title">Partner with <span class="highlight">Arshith <span class="animated-ai-text">AI</span> Tech</span></h2>
+                    <p class="partner-ai-desc" data-i18n="partner-desc">Unleash the power of cognitive computing. In strategic collaboration with Arshith AI Tech, we deliver cutting-edge artificial intelligence, custom deep learning pipelines, and predictive analytics that supercharge enterprise growth. Enhance your decision-making workflows and drive digital transformation with our robust, intelligent software ecosystem.</p>
+                    <div class="partner-ai-actions">
+                        <a href="#contact" class="btn-contact" data-i18n="btn-partner-division">Explore AI Ecosystem</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Client & Partner Reviews Section -->
+        <section class="reviews-section reveal" id="reviews" style="padding: 8rem 5%; background: rgba(0,0,0,0.02); border-bottom: 1px solid var(--glass-border);">
+            <div class="container" style="max-width: 1200px; margin: 0 auto;">
+                <h2 class="section-title text-center" data-i18n="reviews-title">Client & Partner <span class="highlight">Reviews</span></h2>
+                <p class="section-subtitle text-center" data-i18n="reviews-subtitle" style="max-width: 700px; margin: -1rem auto 4rem auto; color: var(--text-muted); text-align: center; line-height: 1.6;">Hear from our global partners and executive leaders who have experienced our transformative solutions.</p>
+                
+                <div class="reviews-grid">
+                    <!-- Review 1 -->
+                    <div class="review-card">
+                        <div class="quote-decorator">“</div>
+                        <div class="star-rating">
+                            <!-- 5 Stars SVG -->
+                            <svg class="star-icon" width="18" height="18" viewBox="0 0 24 24" fill="var(--crown-yellow)"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="star-icon" width="18" height="18" viewBox="0 0 24 24" fill="var(--crown-yellow)"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="star-icon" width="18" height="18" viewBox="0 0 24 24" fill="var(--crown-yellow)"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="star-icon" width="18" height="18" viewBox="0 0 24 24" fill="var(--crown-yellow)"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="star-icon" width="18" height="18" viewBox="0 0 24 24" fill="var(--crown-yellow)"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        </div>
+                        <blockquote class="review-body" data-i18n="rev1-text">"Arshith Fresh transformed our supply chain. Their certified organic sourcing and automated smart logistics saved us 30% in operational costs."</blockquote>
+                        <div class="review-author">
+                            <div class="author-avatar avatar-teal">SJ</div>
+                            <div class="author-info">
+                                <h4 class="author-name" data-i18n="rev1-name">Sarah Jenkins</h4>
+                                <p class="author-role" data-i18n="rev1-role">COO, Global Retail Corp</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="review-card">
+                        <div class="quote-decorator">“</div>
+                        <div class="star-rating">
+                            <svg class="star-icon" width="18" height="18" viewBox="0 0 24 24" fill="var(--crown-yellow)"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="star-icon" width="18" height="18" viewBox="0 0 24 24" fill="var(--crown-yellow)"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="star-icon" width="18" height="18" viewBox="0 0 24 24" fill="var(--crown-yellow)"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="star-icon" width="18" height="18" viewBox="0 0 24 24" fill="var(--crown-yellow)"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="star-icon" width="18" height="18" viewBox="0 0 24 24" fill="var(--crown-yellow)"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        </div>
+                        <blockquote class="review-body" data-i18n="rev2-text">"Arshith Infotech delivered an absolute masterpiece. Our enterprise dashboard is robust, fast, and secure. Truly state-of-the-art backend systems!"</blockquote>
+                        <div class="review-author">
+                            <div class="author-avatar avatar-blue">AS</div>
+                            <div class="author-info">
+                                <h4 class="author-name" data-i18n="rev2-name">Dr. Amit Sharma</h4>
+                                <p class="author-role" data-i18n="rev2-role">Director, Tech Solutions</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="review-card">
+                        <div class="quote-decorator">“</div>
+                        <div class="star-rating">
+                            <svg class="star-icon" width="18" height="18" viewBox="0 0 24 24" fill="var(--crown-yellow)"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="star-icon" width="18" height="18" viewBox="0 0 24 24" fill="var(--crown-yellow)"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="star-icon" width="18" height="18" viewBox="0 0 24 24" fill="var(--crown-yellow)"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="star-icon" width="18" height="18" viewBox="0 0 24 24" fill="var(--crown-yellow)"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="star-icon" width="18" height="18" viewBox="0 0 24 24" fill="var(--crown-yellow)"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        </div>
+                        <blockquote class="review-body" data-i18n="rev3-text">"Suntech Solutions provided outstanding strategic clarity. Their scaling blueprints helped us expand into the European market ahead of schedule."</blockquote>
+                        <div class="review-author">
+                            <div class="author-avatar avatar-violet">ER</div>
+                            <div class="author-info">
+                                <h4 class="author-name" data-i18n="rev3-name">Elena Rostova</h4>
+                                <p class="author-role" data-i18n="rev3-role">Managing Partner, Peak Ventures</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest News & Updates Section -->
+        <section class="news-section reveal" id="news">
+            <div class="news-container">
+                <h2 class="section-title text-center" data-i18n="news-title">Latest <span class="highlight">News & Updates</span></h2>
+                <div class="news-grid">
+                    <!-- News Item 1 -->
+                    <article class="news-card">
+                        <div class="news-img-wrapper">
+                            <img src="images/news1.png" alt="Sustainable Energy Expand" class="news-img">
+                            <div class="news-date">Oct 15, 2026</div>
+                        </div>
+                        <div class="news-content">
+                            <span class="news-category" data-i18n="news-cat1">Sustainability</span>
+                            <h3 class="news-title" data-i18n="news-title1">Arshit Group Expands into Sustainable Energy Solutions</h3>
+                            <p class="news-excerpt" data-i18n="news-desc1">As part of our commitment to a greener future, we have launched a new initiative to integrate advanced solar technologies across all our major facilities worldwide.</p>
+                            <a href="#" class="read-more"><span data-i18n="news-read">Read Full Story</span> ↗</a>
+                        </div>
+                    </article>
+
+                    <!-- News Item 2 -->
+                    <article class="news-card">
+                        <div class="news-img-wrapper">
+                            <img src="images/news2.png" alt="AI Platform Launch" class="news-img">
+                            <div class="news-date">Oct 02, 2026</div>
+                        </div>
+                        <div class="news-content">
+                            <span class="news-category" data-i18n="news-cat2">Technology</span>
+                            <h3 class="news-title" data-i18n="news-title2">Tech Division Launches Revolutionary AI Platform</h3>
+                            <p class="news-excerpt" data-i18n="news-desc2">Arshit Infotech introduces a next-generation AI platform designed to streamline enterprise data processes and enhance predictive analytics for businesses.</p>
+                            <a href="#" class="read-more"><span data-i18n="news-read">Read Full Story</span> ↗</a>
+                        </div>
+                    </article>
+
+                    <!-- News Item 3 -->
+                    <article class="news-card">
+                        <div class="news-img-wrapper">
+                            <img src="images/news3.png" alt="Q3 Financial Results" class="news-img">
+                            <div class="news-date">Sep 28, 2026</div>
+                        </div>
+                        <div class="news-content">
+                            <span class="news-category" data-i18n="news-cat3">Business</span>
+                            <h3 class="news-title" data-i18n="news-title3">Q3 Financial Results Show Record Growth and Expansion</h3>
+                            <p class="news-excerpt" data-i18n="news-desc3">The group reports a 24% year-over-year revenue increase, driven primarily by our rapid global expansion and successful new acquisitions in the European market.</p>
+                            <a href="#" class="read-more"><span data-i18n="news-read">Read Full Story</span> ↗</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Join Us / Careers Showroom Section -->
+        <section class="careers-showroom reveal" id="contact">
+            <div class="showroom-container">
+                <!-- Left Panel: Connection Panel -->
+                <div class="connection-panel">
+                    <span class="tracking-tag" data-i18n="careers-tag">CAREERS</span>
+                    <h2 class="showroom-title" data-i18n="careers-title">Supercharge Your Career with Us</h2>
+                    <p class="showroom-desc" data-i18n="careers-desc">Join a dynamic team of innovators, creators, and leaders. We offer an environment where your ideas turn into industry-defining solutions. Let's build the future together.</p>
+                    
+                    <!-- Minimalist Connection Form -->
+                    <div class="mini-contact-form-wrapper">
+                        <form id="contactForm" class="mini-contact-form">
+                            <div class="form-row">
+                                <div class="form-group mini">
+                                    <input type="text" id="name" name="name" placeholder=" " required>
+                                    <label for="name" data-i18n="form-name">Full Name</label>
+                                </div>
+                                <div class="form-group mini">
+                                    <input type="email" id="email" name="email" placeholder=" " required>
+                                    <label for="email" data-i18n="form-email">Email Address</label>
+                                </div>
+                            </div>
+                            <div class="form-group mini">
+                                <input type="text" id="subject" name="subject" placeholder=" " required>
+                                <label for="subject" data-i18n="form-subject">Subject</label>
+                            </div>
+                            <div class="form-group mini">
+                                <textarea id="message" name="message" rows="3" placeholder=" " required></textarea>
+                                <label for="message" data-i18n="form-msg">Message</label>
+                            </div>
+                            <div class="form-actions">
+                                <button type="submit" class="submit-btn mini" data-i18n="btn-send">Send Message</button>
+                                <a href="internships.html" class="explore-btn" data-i18n="btn-explore">Explore Careers</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Right Panel: The Team Matrix -->
+                <div class="team-matrix">
+                    <!-- Profile Card 1 -->
+                    <div class="profile-card" data-card="1">
+                        <div class="portrait-wrapper">
+                            <div class="glow-overlay glow-pink"></div>
+                            <img src="images/Screenshot 2026-05-16 185518.png" alt="Alex Carter" class="portrait-img">
+                        </div>
+                        <div class="profile-info">
+                            <h4>Alex Carter</h4>
+                            <p>Lead Architect</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Profile Card 2 -->
+                    <div class="profile-card" data-card="2">
+                        <div class="portrait-wrapper">
+                            <div class="glow-overlay glow-teal"></div>
+                            <img src="images/Screenshot 2026-05-16 185542.jpg" alt="Marcus Vance" class="portrait-img">
+                        </div>
+                        <div class="profile-info">
+                            <h4>Marcus Vance</h4>
+                            <p>Senior Developer</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Profile Card 3 -->
+                    <div class="profile-card" data-card="3">
+                        <div class="portrait-wrapper">
+                            <div class="glow-overlay glow-violet"></div>
+                            <img src="images/Screenshot 2026-05-16 185600.jpg" alt="Sora Tanaka" class="portrait-img">
+                        </div>
+                        <div class="profile-info">
+                            <h4>Sora Tanaka</h4>
+                            <p>UI/UX Architect</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Profile Card 4 -->
+                    <div class="profile-card" data-card="4">
+                        <div class="portrait-wrapper">
+                            <div class="glow-overlay glow-orange"></div>
+                            <img src="images/Screenshot 2026-05-16 185614.jpg" alt="Elena Rostova" class="portrait-img">
+                        </div>
+                        <div class="profile-info">
+                            <h4>Elena Rostova</h4>
+                            <p>Product Manager</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+        <footer class="new_footer_area bg_color">
+        <div class="new_footer_top">
+            <div class="container">
+                <div class="row">
+                    <!-- Get in Touch Widget (Newsletter Form) -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s">
+                            <h3 class="f-title f_600 t_color f_size_18" data-i18n="nav-contact">Contact Us</h3>
+                            <p data-i18n="footer-nl-desc">Subscribe to our newsletter to get the latest updates and industry insights.</p>
+                            <form action="#" class="f_subscribe_two mailchimp" method="post" novalidate="true" _lpchecked="1">
+                                <input type="text" name="EMAIL" class="form-control memail" placeholder="Email Address" data-i18n-placeholder="footer-nl-ph">
+                                <button class="btn btn_get btn_get_two" type="submit" data-i18n="footer-subscribe">Subscribe</button>
+                                <p class="mchimp-errmessage" style="display: none;"></p>
+                                <p class="mchimp-sucmessage" style="display: none;"></p>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <!-- Our Divisions Widget -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.4s">
+                            <h3 class="f-title f_600 t_color f_size_18" data-i18n="footer-div">Our Divisions</h3>
+                            <ul class="list-unstyled f_list">
+                                <li><a href="ecommerce.html" target="_blank">Arshith Fresh</a></li>
+                                <li><a href="it-services.html" target="_blank">Arshith Infotech</a></li>
+                                <li><a href="business-consulting.html" target="_blank">Suntech Solutions</a></li>
+                                <li><a href="#">Global Investments</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Quick Links Widget -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.6s">
+                            <h3 class="f-title f_600 t_color f_size_18" data-i18n="footer-ql">Quick Links</h3>
+                            <ul class="list-unstyled f_list">
+                                <li><a href="#about" data-i18n="nav-about">About Us</a></li>
+                                <li><a href="#business" data-i18n="nav-business">Businesses</a></li>
+                                <li><a href="#careers" data-i18n="nav-careers">Careers</a></li>
+                                <li><a href="#contact" data-i18n="nav-contact">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Widget -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s">
+                            <h3 class="f-title f_600 t_color f_size_18" data-i18n="footer-social">Follow Us</h3>
+                            <div class="f_social_icon">
+                                <a href="https://www.linkedin.com/company/arshith-fresh-india-pvt-ltd/?originalSubdomain=in" target="_blank" rel="noopener noreferrer" class="fab fa-linkedin" aria-label="LinkedIn"></a>
+                                <a href="#" class="fab fa-facebook-f" aria-label="Facebook"></a>
+                                <a href="#" class="fab fa-twitter" aria-label="Twitter"></a>
+                                <a href="#" class="fab fa-instagram" aria-label="Instagram"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Animated Background Beetle & Cyclist -->
+            <div class="footer_bg">
+                <div class="footer_bg_one"><div class="car-logo">Let’s start with Arshit<span>.</span></div></div>
+                <div class="footer_bg_two"><div class="cyclist-logo">Others</div></div>
+            </div>
+        </div>
+        
+        <!-- Copyright Bottom -->
+        <div class="footer_bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <p class="mb-0 f_400" data-i18n="footer-copy">&copy; 2026 Arshit Group of Industries. All rights reserved.</p>
+                    </div>
+                    <div class="col-lg-6 text-right">
+                        <p>Made with <i class="fa fa-heart" style="color: var(--primary-color);"></i> by <a href="#" style="color: var(--primary-color); text-decoration: none; font-weight: 600;">Arshit Tech Labs</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="translations.js"></script>
+    <script>
+
+
+
+
+        // --- Scroll Reveal Animation ---
+        const revealElements = document.querySelectorAll('.reveal');
+        
+        // --- Match Centre Accordion interactive Logic ---
+        const mcMenuItems = document.querySelectorAll('.mc-menu-item');
+        const courtPreviewSlides = document.querySelectorAll('.court-preview-slide');
+
+        mcMenuItems.forEach(item => {
+            item.addEventListener('click', () => {
+                // Deactivate all menu items
+                mcMenuItems.forEach(mi => {
+                    mi.classList.remove('active');
+                    // Change status icon back to plus
+                    const iconSpan = mi.querySelector('.mc-item-status-icon');
+                    if (iconSpan) {
+                        iconSpan.innerHTML = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>`;
+                    }
+                });
+
+                // Activate current menu item
+                item.classList.add('active');
+                const activeIconSpan = item.querySelector('.mc-item-status-icon');
+                if (activeIconSpan) {
+                    activeIconSpan.innerHTML = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>`;
+                }
+
+                // Deactivate all slides
+                courtPreviewSlides.forEach(slide => slide.classList.remove('active'));
+
+                // Activate matching slide
+                const targetId = `preview-${item.getAttribute('data-target')}`;
+                const targetSlide = document.getElementById(targetId);
+                if (targetSlide) {
+                    targetSlide.classList.add('active');
+                }
+            });
+        });
+        
+        const revealOptions = {
+            root: null,
+            threshold: 0.15, // Trigger when 15% is visible
+            rootMargin: "0px 0px -50px 0px" // Slightly before it fully enters
+        };
+        
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    // Stop observing once revealed so it doesn't fade out when scrolling up
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, revealOptions);
+        
+        revealElements.forEach(el => {
+            revealObserver.observe(el);
+        });
+
+        // --- Contact Form Submission Logic ---
+        const contactForm = document.getElementById('contactForm');
+        
+        if (contactForm) {
+            contactForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                
+                // Convert form to JSON
+                const formData = new FormData(contactForm);
+                const data = Object.fromEntries(formData.entries());
+                
+                try {
+                    const response = await fetch('http://localhost:3000/api/contact', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(data)
+                    });
+                    
+                    const result = await response.json();
+                    
+                    if (response.ok) {
+                        alert('Message sent! ' + result.message);
+                        contactForm.reset();
+                    } else {
+                        alert('Error: ' + result.error);
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    alert('Could not connect to the server. Is your node server running?');
+                }
+            });
+        }
+
+        // --- Careers Showroom Parallax and Magnetic Pull ---
+        const showroomSection = document.getElementById('contact');
+        const parallaxCards = document.querySelectorAll('.profile-card');
+        const portraitWrappers = document.querySelectorAll('.portrait-wrapper');
+
+        function handleParallax() {
+            if (!showroomSection) return;
+            
+            const sectionRect = showroomSection.getBoundingClientRect();
+            const viewportHeight = window.innerHeight;
+            
+            // Check if the section is visible in viewport
+            if (sectionRect.top < viewportHeight && sectionRect.bottom > 0) {
+                // Calculate scroll progress through the section (-1 to 1)
+                const scrollProgress = (sectionRect.top - viewportHeight) / (sectionRect.height + viewportHeight);
+                
+                parallaxCards.forEach((card, index) => {
+                    // Cards 1 & 3 shift down, Cards 2 & 4 shift up
+                    const direction = (index % 2 === 0) ? 1 : -1;
+                    const speed = 40; // max shift in pixels
+                    const yOffset = scrollProgress * direction * speed;
+                    
+                    card.style.transform = `translate3d(0, ${yOffset}px, 0)`;
+                });
+            }
+        }
+
+        // Magnetic Pull on Desktop Devices
+        const isDesktop = window.matchMedia('(min-width: 1024px)');
+
+        if (isDesktop.matches) {
+            portraitWrappers.forEach(wrapper => {
+                const img = wrapper.querySelector('.portrait-img');
+                
+                wrapper.addEventListener('mousemove', (e) => {
+                    const rect = wrapper.getBoundingClientRect();
+                    
+                    // Calculate relative mouse coordinates (-0.5 to 0.5)
+                    const mouseX = (e.clientX - rect.left) / rect.width - 0.5;
+                    const mouseY = (e.clientY - rect.top) / rect.height - 0.5;
+                    
+                    // Max pull distance in pixels
+                    const maxPull = 15; 
+                    const pullX = mouseX * maxPull;
+                    const pullY = mouseY * maxPull;
+                    
+                    // Apply magnetic pull and a slight scale/tilt
+                    img.style.transform = `translate3d(${pullX}px, ${pullY}px, 0) scale(1.08)`;
+                });
+                
+                wrapper.addEventListener('mouseleave', () => {
+                    // Reset seamlessly
+                    img.style.transform = 'translate3d(0, 0, 0) scale(1)';
+                });
+            });
+        }
+
+        window.addEventListener('scroll', () => {
+            requestAnimationFrame(handleParallax);
+        });
+
+        // --- Kinetic Typography Logic ---
+        const kfRight = document.querySelector('.kf-right');
+        const kfColumns = document.querySelectorAll('.kf-column');
+        const kfTracks = document.querySelectorAll('.kf-text-track');
+        
+        let mouseY = 0;
+        let lerpMouseY = 0;
+        const lerpAmount = 0.05;
+        
+        window.addEventListener('mousemove', (e) => {
+            // Normalize mouse Y position (-1 to 1)
+            mouseY = (e.clientY / window.innerHeight) * 2 - 1;
+        });
+
+        function animateKinetic() {
+            const scrollY = window.pageYOffset;
+            
+            // Smoothly interpolate mouse position
+            lerpMouseY += (mouseY - lerpMouseY) * lerpAmount;
+            
+            kfTracks.forEach((track, index) => {
+                const column = kfColumns[index];
+                const speed = parseFloat(column.getAttribute('data-speed'));
+                
+                // Calculate scroll displacement
+                const scrollOffset = scrollY * speed;
+                
+                // Calculate mouse displacement (parallax)
+                const mouseOffset = lerpMouseY * 50 * (index % 2 === 0 ? 1 : -1);
+                
+                // Combine offsets
+                const totalOffset = scrollOffset + mouseOffset;
+                
+                // Use translate3d for hardware acceleration
+                // We use modulo for seamless looping if the text track is long enough
+                track.style.transform = `translate3d(-50%, ${totalOffset % 1000}px, 0)`;
+            });
+            
+            requestAnimationFrame(animateKinetic);
+        }
+
+        // Initialize animation if the element exists
+        if (kfRight) {
+            animateKinetic();
+        }
+
+    </script>
+</body>
+</html>

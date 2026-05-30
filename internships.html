@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internships - Arshit Group</title>
+    <meta name="description" content="Launch your career with an internship at Arshit Group of Industries.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="light-mode">
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">Arshit</span><span class="logo-dot">.</span>
+            </a>
+            
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link" data-i18n="nav-home">Home</a></li>
+                    <li class="nav-item"><a href="index.html#about" class="nav-link" data-i18n="nav-about">About Us</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="index.html#business" class="nav-link"><span data-i18n="nav-business">Businesses</span> <svg class="dropdown-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="it-services.html" data-i18n="it-nav-link">IT Services & IT Consulting</a></li>
+                            <li><a href="ecommerce.html" data-i18n="ec-nav-link">E-Commerce</a></li>
+                            <li><a href="#">Multi sellers</a></li>
+                            <li><a href="business-consulting.html" data-i18n="bc-nav-link">Business Consulting & Services</a></li>
+                            <li><a href="#">Digital Marketing</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="index.html#news" class="nav-link"><span data-i18n="nav-news">News</span> <svg class="dropdown-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Press Releases</a></li>
+                            <li><a href="#">Company Updates</a></li>
+                            <li><a href="#">Media Kit</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="index.html#careers" class="nav-link"><span data-i18n="nav-careers">Careers</span> <svg class="dropdown-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Open Positions</a></li>
+                            <li><a href="#">Life at Arshit</a></li>
+                            <li><a href="internships.html">Internships</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link"><span data-i18n="nav-lang">Languages</span> <svg class="dropdown-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" class="lang-option" data-lang="en">English</a></li>
+                            <li><a href="#" class="lang-option" data-lang="te">తెలుగు (Telugu)</a></li>
+                            <li><a href="#" class="lang-option" data-lang="hi">हिंदी (Hindi)</a></li>
+                            <li><a href="#" class="lang-option" data-lang="kn">ಕನ್ನಡ (Kannada)</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <button id="theme-toggle" class="theme-btn" aria-label="Toggle Light/Dark Mode">
+                            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="internships-section">
+        <!-- Internships Hero -->
+        <section class="hero-section has-parallax-bg" style="position: relative; min-height: 95vh; display: flex; align-items: center; justify-content: center; padding: 140px 5% 80px 5%; overflow: hidden;">
+            <div id="hero-bg-parallax"></div>
+            <!-- Elegant responsive theme-adaptive overlay with Option 2 floating streaks -->
+            <div class="intern-hero-overlay">
+                <div class="hero-floating-elements">
+                    <span class="floating-streak" style="left: 10%; animation-delay: 0s; animation-duration: 12s;"></span>
+                    <span class="floating-streak silver" style="left: 30%; animation-delay: 2s; animation-duration: 16s;"></span>
+                    <span class="floating-streak" style="left: 55%; animation-delay: 4s; animation-duration: 14s;"></span>
+                    <span class="floating-streak silver" style="left: 75%; animation-delay: 1s; animation-duration: 18s;"></span>
+                    <span class="floating-point" style="left: 20%; animation-delay: 0.5s; animation-duration: 9s;"></span>
+                    <span class="floating-point silver" style="left: 45%; animation-delay: 3s; animation-duration: 11s;"></span>
+                    <span class="floating-point" style="left: 65%; animation-delay: 1.5s; animation-duration: 8s;"></span>
+                    <span class="floating-point silver" style="left: 85%; animation-delay: 5s; animation-duration: 13s;"></span>
+                </div>
+            </div>
+            
+            <div class="container" style="max-width: 1200px; margin: 0 auto; width: 100%; display: flex; flex-wrap: wrap; gap: 4rem; align-items: center; z-index: 1;">
+                <!-- Left text column -->
+                <div class="hero-content hero-animate" style="flex: 1.2; min-width: 320px; text-align: left;">
+                    <div class="hero-glass-badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        Arshit Elite Academy
+                    </div>
+                    <h1 class="intern-hero-title" style="font-size: clamp(3.2rem, 5.5vw, 4.8rem); font-family: 'Outfit', sans-serif; font-weight: 800; line-height: 1.1; margin-bottom: 1.5rem; letter-spacing: -1.5px;">
+                        Forge Your <br>
+                        <span style="background: linear-gradient(135deg, var(--blue-light) 0%, var(--yass-queen) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Future Career</span>
+                    </h1>
+                    <p class="intern-hero-desc" style="font-size: 1.25rem; line-height: 1.7; margin-bottom: 2.5rem; max-width: 580px;">
+                        Immerse yourself in structured live production systems, receive direct standard mentoring, and secure guaranteed career accelerations.
+                    </p>
+                    <div style="display: flex; flex-wrap: wrap; gap: 1.5rem;">
+                        <a href="apply.html" class="cta-glow-btn" style="margin-bottom: 0;">Apply Today</a>
+                        <a href="#roles" class="premium-btn-cta" style="width: auto; display: inline-flex; align-items: center; padding: 1.1rem 2.5rem; border-radius: 100px;">Explore Roles</a>
+                    </div>
+                </div>
+
+                <!-- Right floating dashboard column -->
+                <div style="flex: 0.8; min-width: 300px; display: flex; flex-direction: column; justify-content: center;">
+                    <div class="hero-stats-panel hero-animate" style="animation-delay: 0.2s;">
+                        <div class="hero-stat-item">
+                            <div class="hero-stat-num">1.2K+</div>
+                            <div class="hero-stat-label">Interns Placed</div>
+                        </div>
+                        <div class="hero-stat-item">
+                            <div class="hero-stat-num">95%</div>
+                            <div class="hero-stat-label">PPO Rate</div>
+                        </div>
+                        <div class="hero-stat-item">
+                            <div class="hero-stat-num">50+</div>
+                            <div class="hero-stat-label">Tech Mentors</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mouse Scroll Indicator -->
+            <div style="position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); z-index: 5; animation: float-slow 3s ease-in-out infinite;">
+                <svg width="24" height="40" viewBox="0 0 24 40" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2" style="border-radius: 100px;">
+                    <rect x="2" y="2" width="20" height="36" rx="10" />
+                    <line x1="12" y1="10" x2="12" y2="18" stroke-linecap="round" />
+                </svg>
+            </div>
+        </section>
+
+        <!-- Internship Overview -->
+        <section class="reveal" style="padding: 9rem 5%; position: relative;">
+            <div class="container" style="max-width: 1200px; margin: 0 auto;">
+                <div style="text-align: center; max-width: 700px; margin: 0 auto 5rem auto;">
+                    <span style="font-size: 0.85rem; font-weight: 700; color: var(--blue-light); letter-spacing: 0.25em; text-transform: uppercase;">Structure & Approach</span>
+                    <h2 style="font-size: clamp(2.2rem, 4vw, 3.2rem); font-family: 'Outfit', sans-serif; font-weight: 800; color: var(--intern-text-title); margin-top: 0.8rem; letter-spacing: -0.5px;">Elite Program <span class="highlight">Overview</span></h2>
+                    <p style="color: var(--intern-text-body); font-size: 1.15rem; line-height: 1.7; margin-top: 1rem;">Everything you need to step out of academia and transition smoothly into highly-demanded corporate architecture.</p>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3rem; margin-top: 4rem;">
+                    <div class="premium-overview-card">
+                        <div class="premium-overview-icon-container icon-blue">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        </div>
+                        <h3>Who Can Apply?</h3>
+                        <p>Undergraduates, recent graduates, or transition professionals looking to upskill rapidly in standard technical stacks.</p>
+                    </div>
+                    
+                    <div class="premium-overview-card">
+                        <div class="premium-overview-icon-container icon-pink">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                        </div>
+                        <h3>How It Works</h3>
+                        <p>Submit your profile, complete technical interviews, secure your cohort seat, and integrate directly with actual ongoing development workflows.</p>
+                    </div>
+                    
+                    <div class="premium-overview-card">
+                        <div class="premium-overview-icon-container icon-green">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                        </div>
+                        <h3>Learning Approach</h3>
+                        <p>100% practical. No sandbox exercises. You will contribute actual production code under absolute industry supervision.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scrolling Parallax Window Divider 1 -->
+        <section class="parallax-window-container">
+            <div class="parallax-window-bg" style="background-image: url('https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1920&q=80')"></div>
+            <div class="parallax-window-overlay"></div>
+            <div class="parallax-window-content interactive-parallax-card">
+                <div class="parallax-window-glare"></div>
+                <span class="eyebrow">Interactive Cohorts</span>
+                <h2>Redefining Work Competence</h2>
+                <p>We build professional engineering foundations. Every week you will commit code, join stand-ups, and review pull requests alongside principal architects.</p>
+            </div>
+        </section>
+
+        <!-- What You Gain -->
+        <section class="reveal" style="padding: 9rem 5%;">
+            <div class="container" style="max-width: 1200px; margin: 0 auto;">
+                <div style="display: flex; flex-wrap: wrap; gap: 5rem; align-items: center;">
+                    <div style="flex: 1.2; min-width: 320px;">
+                        <span style="font-size: 0.85rem; font-weight: 700; color: var(--blue-light); letter-spacing: 0.25em; text-transform: uppercase;">Professional Growth</span>
+                        <h2 style="font-size: clamp(2.2rem, 4vw, 3.2rem); font-family: 'Outfit', sans-serif; font-weight: 800; color: var(--intern-text-title); margin-top: 0.8rem; margin-bottom: 2rem; letter-spacing: -0.5px;">Skills You Will <span class="highlight">Master</span></h2>
+                        <p style="color: var(--intern-text-body); font-size: 1.15rem; line-height: 1.8; margin-bottom: 3.5rem;">
+                            Beyond code syntax, we train you in standard system scaling, database synchronization, agile team environments, and professional career networking.
+                        </p>
+                        
+                        <div class="tilt-grid">
+                            <div class="tilt-card">
+                                <div class="tilt-glare"></div>
+                                <h4 style="color: var(--blue-light);">Technical Expertise</h4>
+                                <p>Learn state-of-the-art architectures: microservices, modern rendering, and clean DB structures.</p>
+                            </div>
+                            
+                            <div class="tilt-card">
+                                <div class="tilt-glare"></div>
+                                <h4 style="color: var(--yass-queen);">System Thinking</h4>
+                                <p>Analyze complexity, scale databases, structure API routers, and configure standard caching layers.</p>
+                            </div>
+                            
+                            <div class="tilt-card">
+                                <div class="tilt-glare"></div>
+                                <h4 style="color: #00ff88;">Agile Operations</h4>
+                                <p>Master sprint flows, Jira backlogs, technical spec writing, and collaborative peer code review cycles.</p>
+                            </div>
+                            
+                            <div class="tilt-card">
+                                <div class="tilt-glare"></div>
+                                <h4 style="color: blueviolet;">Team Synergy</h4>
+                                <p>Develop communication mechanisms, work in multidisciplinary squads, and present products to management.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="flex: 0.8; min-width: 300px; display: flex; justify-content: center; position: relative;">
+                        <!-- Rotating visual overlay -->
+                        <div style="position: absolute; top: -10%; left: -10%; width: 120%; height: 120%; background: radial-gradient(circle, rgba(0, 221, 255, 0.05) 0%, transparent 70%); z-index: -1;"></div>
+                        
+                        <div style="width: 100%; max-width: 450px; overflow: hidden; border-radius: 32px; border: 1px solid var(--intern-card-border); box-shadow: 0 30px 60px rgba(0,0,0,0.1); background: var(--intern-card-bg); padding: 3rem; display: flex; align-items: center; justify-content: center;">
+                            <style>
+                                @keyframes slideImages {
+                                    0%, 28% { transform: translateX(0); }
+                                    33%, 61% { transform: translateX(-100%); }
+                                    66%, 95% { transform: translateX(-200%); }
+                                    100% { transform: translateX(0); }
+                                }
+                            </style>
+                            <div style="display: flex; width: 100%; animation: slideImages 9s cubic-bezier(0.86, 0, 0.07, 1) infinite; align-items: center;">
+                                <div style="min-width: 100%; display: flex; justify-content: center;">
+                                    <img src="images/arshith_fresh.png" alt="Arshith Fresh" style="max-height: 250px; object-fit: contain; filter: drop-shadow(0 15px 30px rgba(0,0,0,0.1));">
+                                </div>
+                                <div style="min-width: 100%; display: flex; justify-content: center;">
+                                    <img src="images/arshithinfotech.png" alt="Arshit Infotech" style="max-height: 250px; object-fit: contain; filter: drop-shadow(0 15px 30px rgba(0,0,0,0.1));">
+                                </div>
+                                <div style="min-width: 100%; display: flex; justify-content: center;">
+                                    <img src="images/suntech_solutions.png" alt="Suntech Solutions" style="max-height: 250px; object-fit: contain; filter: drop-shadow(0 15px 30px rgba(0,0,0,0.1));">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Internship Journey Timeline -->
+        <section class="timeline-section reveal">
+            <div class="container" style="max-width: 1200px; margin: 0 auto;">
+                <div style="text-align: center; max-width: 700px; margin: 0 auto 6rem auto;">
+                    <span style="font-size: 0.85rem; font-weight: 700; color: var(--yass-queen); letter-spacing: 0.25em; text-transform: uppercase;">Step by Step</span>
+                    <h2 style="font-size: clamp(2.2rem, 4vw, 3.2rem); font-family: 'Outfit', sans-serif; font-weight: 800; color: var(--intern-text-title); margin-top: 0.8rem; letter-spacing: -0.5px;">The Internship <span class="highlight">Journey</span></h2>
+                    <p style="color: var(--intern-text-body); font-size: 1.15rem; line-height: 1.7; margin-top: 1rem;">An incremental, structured timeline designed to groom you from a baseline coder into an autonomous engineer.</p>
+                </div>
+
+                <div class="timeline-container">
+                    <!-- Dynamic Glowing Progress Line -->
+                    <div class="timeline-line-track">
+                        <div class="timeline-line-progress" id="timeline-progress-fill"></div>
+                    </div>
+
+                    <!-- Step 1 -->
+                    <div class="timeline-node">
+                        <div class="timeline-bullet"></div>
+                        <div class="timeline-content-card">
+                            <span class="timeline-step-badge">Stage 01</span>
+                            <h3>Profile & Skill Assessment</h3>
+                            <p>Submit your application profile. Undergo a structured baseline skill evaluation so we can align your engineering vertical perfectly.</p>
+                        </div>
+                        <div style="width: 45%;"></div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="timeline-node">
+                        <div style="width: 45%;"></div>
+                        <div class="timeline-bullet"></div>
+                        <div class="timeline-content-card">
+                            <span class="timeline-step-badge">Stage 02</span>
+                            <h3>Immersive Bootcamp</h3>
+                            <p>Spend 2 weeks in structured code drills, learning systems architecture, testing protocols, styling guidelines, and Git standards.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="timeline-node">
+                        <div class="timeline-bullet"></div>
+                        <div class="timeline-content-card">
+                            <span class="timeline-step-badge">Stage 03</span>
+                            <h3>Squad Integration</h3>
+                            <p>Join an active software development or product team. Receive dedicated task tickets, build real features, and submit real pull requests.</p>
+                        </div>
+                        <div style="width: 45%;"></div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="timeline-node">
+                        <div style="width: 45%;"></div>
+                        <div class="timeline-bullet"></div>
+                        <div class="timeline-content-card">
+                            <span class="timeline-step-badge">Stage 04</span>
+                            <h3>Principal Mentorship</h3>
+                            <p>Engage in weekly syncs, technical deep dives, architectural reviews, and resume optimization sessions with tech leads.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="timeline-node">
+                        <div class="timeline-bullet"></div>
+                        <div class="timeline-content-card">
+                            <span class="timeline-step-badge">Stage 05</span>
+                            <h3>PPO & Credentials</h3>
+                            <p>Graduate the program. Receive your formal Experience Certificate and customized LOR. Outstanding candidates receive Pre-Placement Offers.</p>
+                        </div>
+                        <div style="width: 45%;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scrolling Parallax Window Divider 2 -->
+        <section class="parallax-window-container">
+            <div class="parallax-window-bg" style="background-image: url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1920&q=80')"></div>
+            <div class="parallax-window-overlay"></div>
+            <div class="parallax-window-content interactive-parallax-card">
+                <div class="parallax-window-glare"></div>
+                <span class="eyebrow">Enterprise Ready</span>
+                <h2>Placement Opportunities</h2>
+                <p>Over 85% of our 6-month graduates receive immediate interview invites or secure direct software placement options at leading enterprises globally.</p>
+            </div>
+        </section>
+
+        <!-- Available Internship Roles -->
+        <section class="reveal" id="roles" style="padding: 9rem 5%;">
+            <div class="container" style="max-width: 1200px; margin: 0 auto;">
+                <div style="text-align: center; max-width: 700px; margin: 0 auto 5rem auto;">
+                    <span style="font-size: 0.85rem; font-weight: 700; color: var(--blue-light); letter-spacing: 0.25em; text-transform: uppercase;">Open Enlistments</span>
+                    <h2 style="font-size: clamp(2.2rem, 4vw, 3.2rem); font-family: 'Outfit', sans-serif; font-weight: 800; color: var(--intern-text-title); margin-top: 0.8rem; letter-spacing: -0.5px;">Explore Open <span class="highlight">Roles</span></h2>
+                    <p style="color: var(--intern-text-body); font-size: 1.15rem; line-height: 1.7; margin-top: 1rem;">Choose your path. We have active cohorts starting across technology and e-commerce tracks.</p>
+                </div>
+                
+                <div class="intern-role-grid">
+                    
+                    <!-- Role 1: Dev 3 Months -->
+                    <a href="internship-software-dev.html" class="premium-role-card card-dev-glow" target="_blank" rel="noopener noreferrer">
+                        <div class="premium-role-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80" alt="Software Development" class="premium-role-img">
+                            <div class="premium-role-img-overlay"></div>
+                            <div class="premium-role-badge">3 Months</div>
+                        </div>
+                        <div class="premium-role-content">
+                            <h3>Software Development</h3>
+                            <p class="desc">A fast-paced program covering Git, React layouts, structured API integrations, and robust database operations.</p>
+                            <div class="premium-role-meta-row">
+                                <span class="meta-pill">Remote</span>
+                                <span class="meta-pill">JS / React</span>
+                                <span class="meta-pill highlight-pill">Cert & LOR</span>
+                            </div>
+                            <span class="premium-role-link">Learn More & Apply ↗</span>
+                        </div>
+                    </a>
+ 
+                    <!-- Role 2: Dev 6 Months -->
+                    <a href="internship-fullstack-pro.html" class="premium-role-card card-dev-glow" target="_blank" rel="noopener noreferrer">
+                        <div class="premium-role-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" alt="Software Development Pro" class="premium-role-img">
+                            <div class="premium-role-img-overlay"></div>
+                            <div class="premium-role-badge">6 Months</div>
+                        </div>
+                        <div class="premium-role-content">
+                            <h3>Full-Stack Dev Pro</h3>
+                            <p class="desc">Lead advanced architecture components. Manage databases, structure cloud APIs, and qualify directly for PPO reviews.</p>
+                            <div class="premium-role-meta-row">
+                                <span class="meta-pill">Hybrid / Remote</span>
+                                <span class="meta-pill">Node / Next.js</span>
+                                <span class="meta-pill highlight-pill">PPO Eligible</span>
+                            </div>
+                            <span class="premium-role-link">Learn More & Apply ↗</span>
+                        </div>
+                    </a>
+ 
+                    <!-- Role 3: E-Commerce 3 Months -->
+                    <a href="internship-ecommerce-ops.html" class="premium-role-card card-ecom-glow" target="_blank" rel="noopener noreferrer">
+                        <div class="premium-role-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80" alt="E-Commerce Operations" class="premium-role-img">
+                            <div class="premium-role-img-overlay"></div>
+                            <div class="premium-role-badge">3 Months</div>
+                        </div>
+                        <div class="premium-role-content">
+                            <h3>E-Commerce Ops</h3>
+                            <p class="desc">Deep-dive into digital marketing, customer conversions, retail analytics, inventory, and vendor configurations.</p>
+                            <div class="premium-role-meta-row">
+                                <span class="meta-pill">Remote</span>
+                                <span class="meta-pill">Operations</span>
+                                <span class="meta-pill highlight-pill">Cert & LOR</span>
+                            </div>
+                            <span class="premium-role-link">Learn More & Apply ↗</span>
+                        </div>
+                    </a>
+ 
+                    <!-- Role 4: E-Commerce 6 Months -->
+                    <a href="internship-digital-retail-pro.html" class="premium-role-card card-ecom-glow" target="_blank" rel="noopener noreferrer">
+                        <div class="premium-role-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1511556532299-8f662fc26c06?auto=format&fit=crop&w=800&q=80" alt="E-Commerce Pro" class="premium-role-img">
+                            <div class="premium-role-img-overlay"></div>
+                            <div class="premium-role-badge">6 Months</div>
+                        </div>
+                        <div class="premium-role-content">
+                            <h3>Digital Retail Pro</h3>
+                            <p class="desc">Take operational control of standard retail systems. Deploy supply chain optimizations, lead marketing campaigns, and target PPO.</p>
+                            <div class="premium-role-meta-row">
+                                <span class="meta-pill">Hybrid / Remote</span>
+                                <span class="meta-pill">Supply Chain</span>
+                                <span class="meta-pill highlight-pill">PPO Eligible</span>
+                            </div>
+                            <span class="premium-role-link">Learn More & Apply ↗</span>
+                        </div>
+                    </a>
+ 
+                </div>
+            </div>
+        </section>
+ 
+        <!-- Internship Durations -->
+        <section class="reveal" style="padding: 9rem 5%; position: relative; background: var(--intern-bg-alt);">
+            <div class="container" style="max-width: 1000px; margin: 0 auto;">
+                <div style="text-align: center; max-width: 700px; margin: 0 auto 5rem auto;">
+                    <span style="font-size: 0.85rem; font-weight: 700; color: var(--yass-queen); letter-spacing: 0.25em; text-transform: uppercase;">Duration Options</span>
+                    <h2 style="font-size: clamp(2.2rem, 4vw, 3.2rem); font-family: 'Outfit', sans-serif; font-weight: 800; color: var(--intern-text-title); margin-top: 0.8rem; letter-spacing: -0.5px;">Internship <span class="highlight">Durations</span></h2>
+                    <p style="color: var(--intern-text-body); font-size: 1.15rem; line-height: 1.7; margin-top: 1rem;">Choose a model that aligns with your timeline, college schedules, and ultimate career intent.</p>
+                </div>
+                
+                <div style="display: flex; flex-wrap: wrap; gap: 4rem; justify-content: center; margin-top: 4rem; align-items: stretch;">
+                    <!-- 3 Months -->
+                    <div class="premium-duration-card duration-blue-glow" style="flex: 1; min-width: 320px; max-width: 440px;">
+                        <h3>3 Months Program</h3>
+                        <div class="price-tag">₹2,000</div>
+                        <ul class="features-list">
+                            <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Intensive core skill drills</li>
+                            <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> 2 Real-time Industry Projects</li>
+                            <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Weekly tech leads mentoring</li>
+                            <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Experience Certificate & LOR</li>
+                        </ul>
+                        <a href="apply.html" class="premium-btn-cta">Apply Now</a>
+                    </div>
+                    
+                    <!-- 6 Months -->
+                    <div class="premium-duration-card duration-pink-glow" style="flex: 1; min-width: 320px; max-width: 440px; transform: scale(1.03); z-index: 2;">
+                        <div class="duration-recommended-badge">Recommended</div>
+                        <h3>6 Months Program</h3>
+                        <div class="price-tag">₹3,000</div>
+                        <ul class="features-list">
+                            <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Advanced code structure scaling</li>
+                            <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> 5+ Real-time Industry Projects</li>
+                            <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> One-on-one principal mentorship</li>
+                            <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Pre-Placement Offer (PPO) reviews</li>
+                            <li><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Custom Recommendation Letter</li>
+                        </ul>
+                        <a href="apply.html" class="premium-btn-cta">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+ 
+        <!-- Contact / Final CTA -->
+        <section class="reveal" style="padding: 9rem 5%; background: var(--intern-bg-alt);">
+            <div class="container" style="max-width: 900px; margin: 0 auto;">
+                <div class="premium-cta-portal">
+                    <h2>Ready to launch your engineering career?</h2>
+                    <p>Enlist in our next cohort. Build real production competency and accelerate your professional timeline.</p>
+                    
+                    <a href="apply.html" class="cta-glow-btn">Apply Now</a>
+                    
+                    <hr style="border: none; border-top: 1px solid var(--intern-card-border); margin: 3rem 0;">
+                    
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--intern-text-title); font-family: 'Outfit', sans-serif;">Need more information?</h3>
+                    <div class="premium-contact-grid">
+                        <a href="mailto:internships@arshitgroup.com" class="premium-contact-item item-blue" style="text-decoration: none;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            internships@arshitgroup.com
+                        </a>
+                        <a href="tel:+919876543210" class="premium-contact-item item-pink" style="text-decoration: none;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            +91 98765 43210
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+        <footer class="new_footer_area bg_color">
+        <div class="new_footer_top">
+            <div class="container">
+                <div class="row">
+                    <!-- Get in Touch Widget (Newsletter Form) -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s">
+                            <h3 class="f-title f_600 t_color f_size_18" data-i18n="nav-contact">Contact Us</h3>
+                            <p data-i18n="footer-nl-desc">Subscribe to our newsletter to get the latest updates and industry insights.</p>
+                            <form action="#" class="f_subscribe_two mailchimp" method="post" novalidate="true" _lpchecked="1">
+                                <input type="text" name="EMAIL" class="form-control memail" placeholder="Email Address" data-i18n-placeholder="footer-nl-ph">
+                                <button class="btn btn_get btn_get_two" type="submit" data-i18n="footer-subscribe">Subscribe</button>
+                                <p class="mchimp-errmessage" style="display: none;"></p>
+                                <p class="mchimp-sucmessage" style="display: none;"></p>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <!-- Our Divisions Widget -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.4s">
+                            <h3 class="f-title f_600 t_color f_size_18" data-i18n="footer-div">Our Divisions</h3>
+                            <ul class="list-unstyled f_list">
+                                <li><a href="ecommerce.html" target="_blank">Arshith Fresh</a></li>
+                                <li><a href="it-services.html" target="_blank">Arshith Infotech</a></li>
+                                <li><a href="business-consulting.html" target="_blank">Suntech Solutions</a></li>
+                                <li><a href="#">Global Investments</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Quick Links Widget -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.6s">
+                            <h3 class="f-title f_600 t_color f_size_18" data-i18n="footer-ql">Quick Links</h3>
+                            <ul class="list-unstyled f_list">
+                                <li><a href="index.html#about" data-i18n="nav-about">About Us</a></li>
+                                <li><a href="index.html#business" data-i18n="nav-business">Businesses</a></li>
+                                <li><a href="index.html#careers" data-i18n="nav-careers">Careers</a></li>
+                                <li><a href="index.html#contact" data-i18n="nav-contact">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Widget -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s">
+                            <h3 class="f-title f_600 t_color f_size_18" data-i18n="footer-social">Follow Us</h3>
+                            <div class="f_social_icon">
+                                <a href="https://www.linkedin.com/company/arshith-fresh-india-pvt-ltd/?originalSubdomain=in" target="_blank" rel="noopener noreferrer" class="fab fa-linkedin" aria-label="LinkedIn"></a>
+                                <a href="#" class="fab fa-facebook-f" aria-label="Facebook"></a>
+                                <a href="#" class="fab fa-twitter" aria-label="Twitter"></a>
+                                <a href="#" class="fab fa-instagram" aria-label="Instagram"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Animated Background Beetle & Cyclist -->
+            <div class="footer_bg">
+                <div class="footer_bg_one"><div class="car-logo">Let’s start with Arshit<span>.</span></div></div>
+                <div class="footer_bg_two"><div class="cyclist-logo">Others</div></div>
+            </div>
+        </div>
+        
+        <!-- Copyright Bottom -->
+        <div class="footer_bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <p class="mb-0 f_400" data-i18n="footer-copy">&copy; 2026 Arshit Group of Industries. All rights reserved.</p>
+                    </div>
+                    <div class="col-lg-6 text-right">
+                        <p>Made with <i class="fa fa-heart" style="color: var(--primary-color);"></i> by <a href="#" style="color: var(--primary-color); text-decoration: none; font-weight: 600;">Arshit Tech Labs</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="translations.js"></script>
+    <script>
+        // --- Scroll Reveal Animation ---
+        const revealElements = document.querySelectorAll('.reveal');
+        
+        const revealOptions = {
+            root: null,
+            threshold: 0.15,
+            rootMargin: "0px 0px -50px 0px"
+        };
+        
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, revealOptions);
+        
+        revealElements.forEach(el => {
+            revealObserver.observe(el);
+        });
+
+        // --- 1. Premium Multi-Layer Parallax Scrolling ---
+        const heroBg = document.getElementById('hero-bg-parallax');
+        const parallaxBgs = document.querySelectorAll('.parallax-window-bg');
+        
+        function handleParallax() {
+            const scrollY = window.pageYOffset;
+            
+            // Hero parallax shift
+            if (heroBg) {
+                heroBg.style.transform = `translate3d(0, ${scrollY * 0.35}px, 0) scale(1.05)`;
+            }
+            
+            // Divider windows parallax shifts
+            parallaxBgs.forEach(bg => {
+                const rect = bg.parentElement.getBoundingClientRect();
+                const windowHeight = window.innerHeight;
+                
+                // If element is visible in viewport
+                if (rect.top < windowHeight && rect.bottom > 0) {
+                    const scrollProgress = (windowHeight - rect.top) / (windowHeight + rect.height);
+                    // Shift the background relative to scroll progress
+                    const offset = (scrollProgress - 0.5) * 150; 
+                    // Add smooth interactive scaling for incredible cinematic portal depth
+                    const scale = 1.08 + (scrollProgress * 0.12);
+                    bg.style.transform = `translate3d(0, ${offset}px, 0) scale(${scale})`;
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', handleParallax);
+        // Trigger initial paint
+        handleParallax();
+ 
+        // --- 2. Interactive 3D Cursor-Tracking Tilt Cards ---
+        const tiltCards = document.querySelectorAll('.tilt-card, .interactive-parallax-card');
+        
+        tiltCards.forEach(card => {
+            const glare = card.querySelector('.tilt-glare, .parallax-window-glare');
+            
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left; // x coordinate inside element
+                const y = e.clientY - rect.top;  // y coordinate inside element
+                
+                const width = rect.width;
+                const height = rect.height;
+                
+                // Calculate normalized coordinates (-0.5 to 0.5)
+                const normX = (x / width) - 0.5;
+                const normY = (y / height) - 0.5;
+                
+                // Maximum tilt degrees
+                const maxTilt = 8; 
+                const rotateX = -normY * maxTilt;
+                const rotateY = normX * maxTilt;
+                
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+                
+                // Update glare highlight radial gradient directly under the pointer
+                if (glare) {
+                    glare.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(255, 255, 255, 0.15) 0%, transparent 65%)`;
+                }
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                // Smooth transition reset
+                card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+                if (glare) {
+                    glare.style.background = `transparent`;
+                }
+            });
+        });
+
+        // --- 3. Interactive Journey Timeline Progress Tracker ---
+        const timelineNodes = document.querySelectorAll('.timeline-node');
+        const progressFill = document.getElementById('timeline-progress-fill');
+        const timelineContainer = document.querySelector('.timeline-container');
+        
+        // Node Reveal Observer
+        const timelineNodeOptions = {
+            root: null,
+            threshold: 0.25,
+            rootMargin: "0px 0px -80px 0px"
+        };
+        
+        const timelineObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('illuminated');
+                }
+            });
+        }, timelineNodeOptions);
+        
+        timelineNodes.forEach(node => {
+            timelineObserver.observe(node);
+        });
+        
+        // Vertical Scroll Progress Line Calculation
+        function updateTimelineProgress() {
+            if (!timelineContainer || !progressFill) return;
+            
+            const rect = timelineContainer.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            const triggerPoint = windowHeight * 0.7; // calculations center around the lower-middle screen viewport
+            
+            // Calculate how far down the triggerPoint is within the timeline container
+            const totalHeight = rect.height;
+            const relativeScroll = triggerPoint - rect.top;
+            
+            let percent = 0;
+            if (relativeScroll > 0) {
+                percent = (relativeScroll / totalHeight) * 100;
+            }
+            
+            // Bound between 0% and 100%
+            percent = Math.max(0, Math.min(100, percent));
+            progressFill.style.height = `${percent}%`;
+        }
+        
+        window.addEventListener('scroll', updateTimelineProgress);
+        updateTimelineProgress();
+
+        // --- 4. Kinetic Typography Footer Logic ---
+        const kfRight = document.querySelector('.kf-right');
+        const kfColumns = document.querySelectorAll('.kf-column');
+        const kfTracks = document.querySelectorAll('.kf-text-track');
+        
+        let mouseY = 0;
+        let lerpMouseY = 0;
+        const lerpAmount = 0.05;
+        
+        window.addEventListener('mousemove', (e) => {
+            mouseY = (e.clientY / window.innerHeight) * 2 - 1;
+        });
+
+        function animateKinetic() {
+            const scrollY = window.pageYOffset;
+            lerpMouseY += (mouseY - lerpMouseY) * lerpAmount;
+            
+            kfTracks.forEach((track, index) => {
+                const column = kfColumns[index];
+                const speed = parseFloat(column.getAttribute('data-speed'));
+                const scrollOffset = scrollY * speed;
+                const mouseOffset = lerpMouseY * 50 * (index % 2 === 0 ? 1 : -1);
+                const totalOffset = scrollOffset + mouseOffset;
+                track.style.transform = `translate3d(-50%, ${totalOffset % 1000}px, 0)`;
+            });
+            
+            requestAnimationFrame(animateKinetic);
+        }
+
+        if (kfRight) {
+            animateKinetic();
+        }
+    </script>
+</body>
+</html>

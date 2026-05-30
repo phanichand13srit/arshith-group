@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Retail Pro Internship - Arshit Group</title>
+    <meta name="description" content="Detailed guide, curriculum, and application details for the 6-Month Digital Retail Pro Internship at Arshit Group.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="light-mode">
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">Arshit</span><span class="logo-dot">.</span>
+            </a>
+            
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link" data-i18n="nav-home">Home</a></li>
+                    <li class="nav-item"><a href="index.html#about" class="nav-link" data-i18n="nav-about">About Us</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="index.html#business" class="nav-link"><span data-i18n="nav-business">Businesses</span> <svg class="dropdown-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="it-services.html" data-i18n="it-nav-link">IT Services & IT Consulting</a></li>
+                            <li><a href="ecommerce.html" data-i18n="ec-nav-link">E-Commerce</a></li>
+                            <li><a href="#">Multi sellers</a></li>
+                            <li><a href="business-consulting.html" data-i18n="bc-nav-link">Business Consulting & Services</a></li>
+                            <li><a href="#">Digital Marketing</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="index.html#news" class="nav-link"><span data-i18n="nav-news">News</span> <svg class="dropdown-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Press Releases</a></li>
+                            <li><a href="#">Company Updates</a></li>
+                            <li><a href="#">Media Kit</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="index.html#careers" class="nav-link"><span data-i18n="nav-careers">Careers</span> <svg class="dropdown-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Open Positions</a></li>
+                            <li><a href="#">Life at Arshit</a></li>
+                            <li><a href="internships.html">Internships</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link"><span data-i18n="nav-lang">Languages</span> <svg class="dropdown-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" class="lang-option" data-lang="en">English</a></li>
+                            <li><a href="#" class="lang-option" data-lang="te">తెలుగు (Telugu)</a></li>
+                            <li><a href="#" class="lang-option" data-lang="hi">हिंदी (Hindi)</a></li>
+                            <li><a href="#" class="lang-option" data-lang="kn">ಕನ್ನಡ (Kannada)</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <button id="theme-toggle" class="theme-btn" aria-label="Toggle Light/Dark Mode">
+                            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Parallax Hero -->
+        <section class="hero-section has-parallax-bg" style="position: relative; min-height: 70vh; display: flex; align-items: center; justify-content: center; text-align: center; padding-top: 100px; overflow: hidden;">
+            <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('https://images.unsplash.com/photo-1511556532299-8f662fc26c06?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover; transform: scale(1.05); z-index: -2; transition: transform 0.5s ease-out;" id="hero-bg-parallax"></div>
+            <!-- Elegant responsive theme-adaptive overlay with Option 2 floating streaks -->
+            <div class="intern-hero-overlay">
+                <div class="hero-floating-elements">
+                    <span class="floating-streak" style="left: 10%; animation-delay: 0s; animation-duration: 12s;"></span>
+                    <span class="floating-streak silver" style="left: 30%; animation-delay: 2s; animation-duration: 16s;"></span>
+                    <span class="floating-streak" style="left: 55%; animation-delay: 4s; animation-duration: 14s;"></span>
+                    <span class="floating-streak silver" style="left: 75%; animation-delay: 1s; animation-duration: 18s;"></span>
+                    <span class="floating-point" style="left: 20%; animation-delay: 0.5s; animation-duration: 9s;"></span>
+                    <span class="floating-point silver" style="left: 45%; animation-delay: 3s; animation-duration: 11s;"></span>
+                    <span class="floating-point" style="left: 65%; animation-delay: 1.5s; animation-duration: 8s;"></span>
+                    <span class="floating-point silver" style="left: 85%; animation-delay: 5s; animation-duration: 13s;"></span>
+                </div>
+            </div>
+            
+            <div class="hero-content hero-animate" style="max-width: 800px; margin: 0 auto; padding: 0 20px; z-index: 1;">
+                <span style="font-size: 0.9rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: #ffab00; display: inline-block; margin-bottom: 1rem; background: rgba(255, 171, 0, 0.15); padding: 0.5rem 1.5rem; border-radius: 50px;">6 Months Pro Program</span>
+                <h1 class="intern-hero-title" style="font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 1.5rem; text-shadow: 0 10px 30px rgba(0,0,0,0.5); font-weight: 700;">Digital Retail Pro</h1>
+                <p class="intern-hero-desc hero-subtitle">Master supply chain scaling, category metrics, vendor relationships, and digital retail marketing at Arshith Fresh.</p>
+                <div style="display: inline-block; margin-top: 1.5rem;">
+                    <a href="apply.html" class="btn-buy" style="font-size: 1.1rem; padding: 1rem 2.5rem; border-radius: 50px; box-shadow: 0 10px 25px rgba(0, 221, 255, 0.3);">Apply Now</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 1: About the Internship -->
+        <section class="reveal" style="padding: 8rem 5%; background: var(--bg-main); position: relative;">
+            <div class="container" style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 4rem; align-items: center;">
+                <!-- Left Text -->
+                <div style="flex: 1.2; min-width: 320px;">
+                    <h2 style="font-size: 2.5rem; font-family: 'Outfit', sans-serif; font-weight: 800; margin-bottom: 1.5rem; color: var(--intern-text-title); display: flex; align-items: center; gap: 15px;">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ffab00" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 17 22 12"></polyline></svg>
+                        About The Internship
+                    </h2>
+                    <p style="color: var(--intern-text-body); font-size: 1.15rem; line-height: 1.8; margin-bottom: 2rem;">
+                        Step into a career in supply chain management. In the Digital Retail Pro Internship at Arshith Fresh, you will be given direct ownership of an entire active product category. You will lead vendor onboardings, forecast stock requirements, formulate marketing pipelines, and balance delivery loops to maintain a premium shopping ecosystem.
+                    </p>
+                </div>
+                
+                <!-- Right Glass Highlight Card -->
+                <div style="flex: 0.8; min-width: 300px;">
+                    <div style="background: var(--intern-card-bg); border: 1px solid rgba(255, 255, 255, 0.08); padding: 3rem; border-radius: 28px; box-shadow: 0 20px 45px rgba(0,0,0,0.03);">
+                        <div style="margin-bottom: 2rem; border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding-bottom: 1.5rem;">
+                            <span style="font-size: 0.85rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 1px; font-weight: 600;">Stipend Support</span>
+                            <h3 style="font-size: 2.2rem; font-family: 'Outfit', sans-serif; font-weight: 800; color: #ffab00; margin-top: 0.5rem;">₹5,000 / month</h3>
+                        </div>
+                        <div>
+                            <span style="font-size: 0.85rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 1px; font-weight: 600;">Scope / Tech Stacks</span>
+                            <div style="display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 1rem;">
+                                <span class="meta-pill highlight-pill" style="border-color: rgba(255,255,255,0.08);">Supply Chain Logs</span>
+                                <span class="meta-pill highlight-pill" style="border-color: rgba(255,255,255,0.08);">Category Owner</span>
+                                <span class="meta-pill highlight-pill" style="border-color: rgba(255,255,255,0.08);">Vendor Relations</span>
+                                <span class="meta-pill highlight-pill" style="border-color: rgba(255,255,255,0.08);">Inventory Planning</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Parallax Divider 1 -->
+        <div class="parallax-window-container">
+            <div class="parallax-bg-window" style="background-image: url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1600&q=80');"></div>
+            <div class="parallax-window-overlay"></div>
+            <div class="parallax-window-content">
+                <div class="parallax-glass-badge">
+                    <span>"Operational excellence is the ultimate competitive advantage."</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2: Who Can Apply -->
+        <section class="reveal" style="padding: 8rem 5%; background: var(--bg-main); position: relative;">
+            <div class="container" style="max-width: 1200px; margin: 0 auto;">
+                <h2 style="font-size: 2.5rem; font-family: 'Outfit', sans-serif; font-weight: 800; text-align: center; margin-bottom: 4rem; color: var(--intern-text-title); display: flex; align-items: center; justify-content: center; gap: 15px;">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    Who Can Apply
+                </h2>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem;">
+                    
+                    <div class="tilt-card" style="padding: 2.5rem; border-radius: 20px;">
+                        <span style="font-size: 1.8rem; margin-bottom: 1rem; display: block;">🎓</span>
+                        <h4 style="font-size: 1.25rem; font-family: 'Outfit', sans-serif; font-weight: 700; color: var(--intern-text-title); margin-bottom: 0.8rem;">Final-year BBA,</h4>
+                        <p style="color: var(--intern-text-body); line-height: 1.6; font-size: 0.95rem; margin: 0;">Final-year BBA, MBA, Commerce, or Supply Chain Management students.</p>
+                    </div>
+                    <div class="tilt-card" style="padding: 2.5rem; border-radius: 20px;">
+                        <span style="font-size: 1.8rem; margin-bottom: 1rem; display: block;">💻</span>
+                        <h4 style="font-size: 1.25rem; font-family: 'Outfit', sans-serif; font-weight: 700; color: var(--intern-text-title); margin-bottom: 0.8rem;">Enthusiasts with</h4>
+                        <p style="color: var(--intern-text-body); line-height: 1.6; font-size: 0.95rem; margin: 0;">Enthusiasts with strong analytical skills and advanced data capabilities.</p>
+                    </div>
+                    <div class="tilt-card" style="padding: 2.5rem; border-radius: 20px;">
+                        <span style="font-size: 1.8rem; margin-bottom: 1rem; display: block;">🔥</span>
+                        <h4 style="font-size: 1.25rem; font-family: 'Outfit', sans-serif; font-weight: 700; color: var(--intern-text-title); margin-bottom: 0.8rem;">Natural problem</h4>
+                        <p style="color: var(--intern-text-body); line-height: 1.6; font-size: 0.95rem; margin: 0;">Natural problem solvers capable of negotiating with suppliers and buyers.</p>
+                    </div>
+                    <div class="tilt-card" style="padding: 2.5rem; border-radius: 20px;">
+                        <span style="font-size: 1.8rem; margin-bottom: 1rem; display: block;">⏳</span>
+                        <h4 style="font-size: 1.25rem; font-family: 'Outfit', sans-serif; font-weight: 700; color: var(--intern-text-title); margin-bottom: 0.8rem;">Highly organized,</h4>
+                        <p style="color: var(--intern-text-body); line-height: 1.6; font-size: 0.95rem; margin: 0;">Highly organized, detail-oriented individuals comfortable in fast environments.</p>
+                    </div>
+                    <div class="tilt-card" style="padding: 2.5rem; border-radius: 20px;">
+                        <span style="font-size: 1.8rem; margin-bottom: 1rem; display: block;">🚀</span>
+                        <h4 style="font-size: 1.25rem; font-family: 'Outfit', sans-serif; font-weight: 700; color: var(--intern-text-title); margin-bottom: 0.8rem;">Candidates looking</h4>
+                        <p style="color: var(--intern-text-body); line-height: 1.6; font-size: 0.95rem; margin: 0;">Candidates looking to secure a full-time Category Lead position post graduation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Parallax Divider 2 -->
+        <div class="parallax-window-container">
+            <div class="parallax-bg-window" style="background-image: url('https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=1600&q=80');"></div>
+            <div class="parallax-window-overlay"></div>
+            <div class="parallax-window-content">
+                <div class="parallax-glass-badge">
+                    <span>"A perfectly balanced supply chain is a beautiful thing."</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 3: Curriculum / Syllabus Roadmap -->
+        <section class="reveal" style="padding: 8rem 5%; background: var(--bg-main); position: relative;">
+            <div class="container" style="max-width: 1200px; margin: 0 auto;">
+                <h2 style="font-size: 2.5rem; font-family: 'Outfit', sans-serif; font-weight: 800; text-align: center; margin-bottom: 5rem; color: var(--intern-text-title); display: flex; align-items: center; justify-content: center; gap: 15px;">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00ff88" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                    Syllabus & Milestones
+                </h2>
+                
+                <div class="premium-timeline">
+                    <div class="timeline-line"></div>
+                    
+                    <div class="timeline-node">
+                        <div class="timeline-glow-point"></div>
+                        <div class="timeline-content-card">
+                            <div class="timeline-step-badge" style="background: rgba(0, 221, 255, 0.1); color: var(--blue-light);">Months 1 - 2</div>
+                            <h3 style="font-size: 1.5rem; font-family: 'Outfit', sans-serif; font-weight: 700; color: var(--intern-text-title); margin-bottom: 0.8rem;">Supply Chain & Logistics scaling</h3>
+                            <p style="color: var(--intern-text-body); line-height: 1.7; font-size: 0.98rem; margin: 0;">
+                                Understand supplier structures, hub layouts, inventory tracking software, and delivery path optimization.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-node">
+                        <div class="timeline-glow-point" style="background: var(--yass-queen); box-shadow: 0 0 15px var(--yass-queen);"></div>
+                        <div class="timeline-content-card">
+                            <div class="timeline-step-badge" style="background: rgba(255, 29, 88, 0.1); color: var(--yass-queen);">Months 3 - 4</div>
+                            <h3 style="font-size: 1.5rem; font-family: 'Outfit', sans-serif; font-weight: 700; color: var(--intern-text-title); margin-bottom: 0.8rem;">Category Management & Vendor pricing</h3>
+                            <p style="color: var(--intern-text-body); line-height: 1.7; font-size: 0.98rem; margin: 0;">
+                                Onboard real vendors, negotiate cost options, run seasonal marketing pipelines, and track performance margins.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-node">
+                        <div class="timeline-glow-point" style="background: #00ff88; box-shadow: 0 0 15px #00ff88;"></div>
+                        <div class="timeline-content-card">
+                            <div class="timeline-step-badge" style="background: rgba(0, 255, 136, 0.1); color: #00ff88;">Months 5 - 6</div>
+                            <h3 style="font-size: 1.5rem; font-family: 'Outfit', sans-serif; font-weight: 700; color: var(--intern-text-title); margin-bottom: 0.8rem;">Capstone Category launch & PPO review</h3>
+                            <p style="color: var(--intern-text-body); line-height: 1.7; font-size: 0.98rem; margin: 0;">
+                                Design and roll out a brand-new niche product category from scratch, balance customer demand, and present results to directors.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Call to Action -->
+        <section class="reveal" style="padding: 8rem 5%; background: var(--bg-main); text-align: center;">
+            <div class="container" style="max-width: 1000px; margin: 0 auto;">
+                <div class="premium-cta-portal">
+                    <h2>Lead the Future of Online Retail Category Management</h2>
+                    <p>Acquire pro-level supply chain negotiation credentials and secure your post-grad career pathway.</p>
+                    <a href="apply.html" class="cta-glow-btn" style="margin-bottom: 0;">Apply Now</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+        <footer class="new_footer_area bg_color">
+        <div class="new_footer_top">
+            <div class="container">
+                <div class="row">
+                    <!-- Get in Touch Widget (Newsletter Form) -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s">
+                            <h3 class="f-title f_600 t_color f_size_18" data-i18n="nav-contact">Contact Us</h3>
+                            <p data-i18n="footer-nl-desc">Subscribe to our newsletter to get the latest updates and industry insights.</p>
+                            <form action="#" class="f_subscribe_two mailchimp" method="post" novalidate="true" _lpchecked="1">
+                                <input type="text" name="EMAIL" class="form-control memail" placeholder="Email Address" data-i18n-placeholder="footer-nl-ph">
+                                <button class="btn btn_get btn_get_two" type="submit" data-i18n="footer-subscribe">Subscribe</button>
+                                <p class="mchimp-errmessage" style="display: none;"></p>
+                                <p class="mchimp-sucmessage" style="display: none;"></p>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <!-- Our Divisions Widget -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.4s">
+                            <h3 class="f-title f_600 t_color f_size_18" data-i18n="footer-div">Our Divisions</h3>
+                            <ul class="list-unstyled f_list">
+                                <li><a href="ecommerce.html" target="_blank">Arshith Fresh</a></li>
+                                <li><a href="it-services.html" target="_blank">Arshith Infotech</a></li>
+                                <li><a href="business-consulting.html" target="_blank">Suntech Solutions</a></li>
+                                <li><a href="#">Global Investments</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Quick Links Widget -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.6s">
+                            <h3 class="f-title f_600 t_color f_size_18" data-i18n="footer-ql">Quick Links</h3>
+                            <ul class="list-unstyled f_list">
+                                <li><a href="index.html#about" data-i18n="nav-about">About Us</a></li>
+                                <li><a href="index.html#business" data-i18n="nav-business">Businesses</a></li>
+                                <li><a href="index.html#careers" data-i18n="nav-careers">Careers</a></li>
+                                <li><a href="index.html#contact" data-i18n="nav-contact">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Widget -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s">
+                            <h3 class="f-title f_600 t_color f_size_18" data-i18n="footer-social">Follow Us</h3>
+                            <div class="f_social_icon">
+                                <a href="https://www.linkedin.com/company/arshith-fresh-india-pvt-ltd/?originalSubdomain=in" target="_blank" rel="noopener noreferrer" class="fab fa-linkedin" aria-label="LinkedIn"></a>
+                                <a href="#" class="fab fa-facebook-f" aria-label="Facebook"></a>
+                                <a href="#" class="fab fa-twitter" aria-label="Twitter"></a>
+                                <a href="#" class="fab fa-instagram" aria-label="Instagram"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Animated Background Beetle & Cyclist -->
+            <div class="footer_bg">
+                <div class="footer_bg_one"><div class="car-logo">Let’s start with Arshit<span>.</span></div></div>
+                <div class="footer_bg_two"><div class="cyclist-logo">Others</div></div>
+            </div>
+        </div>
+        
+        <!-- Copyright Bottom -->
+        <div class="footer_bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <p class="mb-0 f_400" data-i18n="footer-copy">&copy; 2026 Arshit Group of Industries. All rights reserved.</p>
+                    </div>
+                    <div class="col-lg-6 text-right">
+                        <p>Made with <i class="fa fa-heart" style="color: var(--primary-color);"></i> by <a href="#" style="color: var(--primary-color); text-decoration: none; font-weight: 600;">Arshit Tech Labs</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="translations.js"></script>
+    <script>
+        // --- Scroll Reveal Animation ---
+        const revealElements = document.querySelectorAll('.reveal');
+        
+        const revealOptions = {
+            root: null,
+            threshold: 0.15,
+            rootMargin: "0px 0px -50px 0px"
+        };
+        
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, revealOptions);
+        
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // --- Timeline Node Illumination ---
+        const timelineNodes = document.querySelectorAll('.timeline-node');
+        const timelineNodeOptions = {
+            root: null,
+            threshold: 0.25,
+            rootMargin: "0px 0px -80px 0px"
+        };
+        const timelineObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('illuminated');
+                }
+            });
+        }, timelineNodeOptions);
+        timelineNodes.forEach(node => {
+            timelineObserver.observe(node);
+        });
+
+        // --- Modern Silky Smooth Scroll-Linked Parallax for Windows ---
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            
+            // Hero parallax
+            const heroBg = document.getElementById('hero-bg-parallax');
+            if (heroBg) {
+                heroBg.style.transform = `translateY(${scrolled * 0.4}px) scale(1.05)`;
+            }
+            
+            // Parallax Windows
+            const windows = document.querySelectorAll('.parallax-bg-window');
+            windows.forEach(win => {
+                const parent = win.parentElement;
+                const rect = parent.getBoundingClientRect();
+                
+                // Only run if visible
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    // Translate the window background relative to its viewport position
+                    const offset = (window.innerHeight - rect.top) * 0.15;
+                    win.style.transform = `translateY(${offset - 100}px) scale(1.1)`;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

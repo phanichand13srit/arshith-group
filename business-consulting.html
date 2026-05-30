@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Consulting & Services - Arshit Group</title>
+    <meta name="description" content="Comprehensive business solutions, digital marketing, e-commerce, and more.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="theme-consulting light-mode">
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">Arshit</span><span class="logo-dot">.</span>
+            </a>
+            
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link" data-i18n="nav-home">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link" data-i18n="nav-about">About Us</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="index.html#business" class="nav-link"><span data-i18n="nav-business">Businesses</span> <svg class="dropdown-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="it-services.html" data-i18n="it-nav-link">IT Services & IT Consulting</a></li>
+                            <li><a href="ecommerce.html" data-i18n="ec-nav-link">E-Commerce</a></li>
+                            <li><a href="#">Multi sellers</a></li>
+                            <li><a href="business-consulting.html" data-i18n="bc-nav-link">Business Consulting & Services</a></li>
+                            <li><a href="#">Digital Marketing</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="index.html#news" class="nav-link"><span data-i18n="nav-news">News</span> <svg class="dropdown-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Press Releases</a></li>
+                            <li><a href="#">Company Updates</a></li>
+                            <li><a href="#">Media Kit</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="index.html#careers" class="nav-link"><span data-i18n="nav-careers">Careers</span> <svg class="dropdown-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Open Positions</a></li>
+                            <li><a href="#">Life at Arshit</a></li>
+                            <li><a href="internships.html">Internships</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link"><span data-i18n="nav-lang">Languages</span> <svg class="dropdown-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" class="lang-option" data-lang="en">English</a></li>
+                            <li><a href="#" class="lang-option" data-lang="te">తెలుగు (Telugu)</a></li>
+                            <li><a href="#" class="lang-option" data-lang="hi">हिंदी (Hindi)</a></li>
+                            <li><a href="#" class="lang-option" data-lang="kn">ಕನ್ನಡ (Kannada)</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <button id="theme-toggle" class="theme-btn" aria-label="Toggle Light/Dark Mode">
+                            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+        <main>
+        <section class="hero-section" style="position: relative; overflow: hidden; padding-bottom: 8rem;">
+            <!-- Background Video Loop -->
+            <div class="hero-video-bg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; overflow: hidden;">
+                <video autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
+                    <source src="images/suntech.mp4" type="video/mp4">
+                </video>
+                <div class="hero-video-overlay"></div>
+            </div>
+            <div class="hero-content hero-animate" style="position: relative; z-index: 1;">
+                <div style="display: inline-flex; align-items: center; justify-content: center; padding: 0.6rem 2rem; background: linear-gradient(90deg, rgba(255, 29, 88, 0.1) 0%, rgba(247, 89, 144, 0.1) 100%); border: 1px solid rgba(255, 29, 88, 0.3); border-radius: 50px; margin-bottom: 2rem; backdrop-filter: blur(10px); box-shadow: 0 4px 15px rgba(255, 29, 88, 0.15);">
+                    <span style="background: linear-gradient(to right, var(--yass-queen), var(--sister-sister)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 1.3rem; font-weight: 800; text-transform: uppercase; letter-spacing: 3px;">Suntech Solutions</span>
+                </div>
+                <h1 data-i18n="bc-hero-title" style="font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 1.5rem;">Strategic Guidance For<br>Unmatched Growth</h1>
+                <p data-i18n="bc-hero-desc" style="font-size: 1.1rem; color: var(--text-muted);">Expert consulting services designed to optimize operations, navigate challenges, and accelerate success.</p>
+            </div>
+        </section>
+
+        <section class="services-section reveal" id="services" style="padding: 5rem 5%;">
+            <div class="container" style="max-width: 1200px; margin: 0 auto;">
+                <h2 class="section-title text-center" data-i18n="bc-services-title">Our <span class="highlight">Expertise</span></h2>
+                <div class="consulting-layout">
+                    <div class="consulting-row">
+                        <div class="consulting-icon-box">
+                            <div class="service-icon blue" style="width: 100px; height: 100px;"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div>
+                        </div>
+                        <div class="consulting-content">
+                            <h3 data-i18n="bc-srv-st">Strategic Planning</h3>
+                            <p data-i18n="bc-srv-st-desc">Develop long-term blueprints that align with your corporate vision, adapt to market shifts, and maximize ROI.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="consulting-row">
+                        <div class="consulting-icon-box">
+                            <div class="service-icon pink" style="width: 100px; height: 100px;"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
+                        </div>
+                        <div class="consulting-content">
+                            <h3 data-i18n="bc-srv-hr">Human Resources</h3>
+                            <p data-i18n="bc-srv-hr-desc">Optimize workforce management, talent acquisition, and corporate culture to drive employee satisfaction.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="consulting-row">
+                        <div class="consulting-icon-box">
+                            <div class="service-icon yellow" style="width: 100px; height: 100px;"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></div>
+                        </div>
+                        <div class="consulting-content">
+                            <h3 data-i18n="bc-srv-op">Operations Management</h3>
+                            <p data-i18n="bc-srv-op-desc">Streamline processes, reduce overhead costs, and implement efficient workflow methodologies.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="consulting-row">
+                        <div class="consulting-icon-box">
+                            <div class="service-icon purple" style="width: 100px; height: 100px;"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h4l2-9 5 18 3-10h6"></path></svg></div>
+                        </div>
+                        <div class="consulting-content">
+                            <h3 data-i18n="bc-srv-fa">Financial Advisory</h3>
+                            <p data-i18n="bc-srv-fa-desc">Gain insights through risk assessment, investment strategies, and corporate restructuring.</p>
+                        </div>
+                    </div></div>
+            </div>
+        </section>
+
+        <section class="contact-section reveal" style="padding: 6rem 5%; background: var(--glass-bg); border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);">
+            <div class="container" style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <h2 style="font-size: 2.2rem; margin-bottom: 1rem; color: inherit;" data-i18n="bc-lead-title">Transform Your Business</h2>
+                <p style="color: var(--text-muted); margin-bottom: 2.5rem; font-size: 1.1rem; line-height: 1.6;" data-i18n="bc-lead-desc">Partner with Suntech Solutions to unlock your organization's true potential through tailored consulting services.</p>
+                <a href="index.html#contact" class="btn-contact" style="display: inline-block; text-decoration: none;" data-i18n="it-btn-partner">Partner With Us</a>
+            </div>
+        </section>
+            <!-- Projects Section -->
+        <section class="projects-section reveal" style="padding: 5rem 5%;">
+            <div class="container" style="max-width: 1200px; margin: 0 auto;">
+                <h2 class="section-title text-center" data-i18n="bc-proj-title">Success <span class="highlight">Stories</span></h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-img">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title" data-i18n="bc-proj-1">Global Market Expansion</h3>
+                            <p class="project-desc" data-i18n="bc-proj-desc-1">Guided a regional manufacturing firm into European markets, resulting in a 40% revenue increase.</p>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-img">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title" data-i18n="bc-proj-2">Merger & Acquisition Strategy</h3>
+                            <p class="project-desc" data-i18n="bc-proj-desc-2">Facilitated a $50M acquisition, ensuring cultural alignment and operational synergy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Awards & Recognition Section -->
+        <section class="awards-section reveal" id="awards" style="position: relative; overflow: hidden; padding: 6rem 5%; background: var(--bg-color); border-bottom: 1px solid var(--glass-border);">
+            <!-- Background Blend Graphic -->
+            <div class="fan-zone-blend-bg">
+                <img src="images/awards_bg.png" alt="Global Recognition & Awards" class="fan-zone-bg-img">
+                <div class="awards-overlay-gradient"></div>
+            </div>
+            
+            <div class="container" style="position: relative; z-index: 1; max-width: 1200px; margin: 0 auto; text-align: center;">
+                <h2 class="section-title text-center" data-i18n="awards-title">Global <span class="highlight">Recognition</span> & Awards</h2>
+                <p class="section-subtitle text-center" data-i18n="awards-subtitle" style="max-width: 700px; margin: -1rem auto 3.5rem auto; color: var(--text-muted); line-height: 1.6;">Our dedication to excellence, innovation, and sustainability has been recognized by industry leaders worldwide.</p>
+                
+                <div class="awards-grid">
+                    <!-- Award 1 -->
+                    <div class="award-card">
+                        <div class="award-glow"></div>
+                        <div class="award-badge-icon-filled">
+                            <img src="images/global_excellence_award.jpg" alt="Global Excellence Award" class="award-badge-img-filled">
+                        </div>
+                        <h3 data-i18n="award1-title">Global Excellence Award 2025</h3>
+                        <p data-i18n="award1-desc">Recognized as the 'Best Sustainable E-Commerce Platform' for driving green supply chains.</p>
+                    </div>
+
+                    <!-- Award 2 -->
+                    <div class="award-card">
+                        <div class="award-glow"></div>
+                        <div class="award-badge-icon-filled">
+                            <img src="images/tech_innovator_laurels.webp" alt="Tech Innovator Laurels" class="award-badge-img-filled">
+                        </div>
+                        <h3 data-i18n="award2-title">Tech Innovator Laurels</h3>
+                        <p data-i18n="award2-desc">Awarded for 'Outstanding Enterprise Software Architecture' and cloud infrastructure.</p>
+                    </div>
+
+                    <!-- Award 3 -->
+                    <div class="award-card">
+                        <div class="award-glow"></div>
+                        <div class="award-badge-icon-filled">
+                            <img src="images/advisory_of_the_year.png" alt="Advisory of the Year" class="award-badge-img-filled">
+                        </div>
+                        <h3 data-i18n="award3-title">Advisory of the Year</h3>
+                        <p data-i18n="award3-desc">Honored for 'Top Business Scaling Strategy' and maximizing client operational efficiency.</p>
+                    </div>
+
+                    <!-- Award 4 -->
+                    <div class="award-card">
+                        <div class="award-glow"></div>
+                        <div class="award-badge-icon-filled">
+                            <img src="images/green_enterprise_medal.jpg" alt="Green Enterprise Medal" class="award-badge-img-filled">
+                        </div>
+                        <h3 data-i18n="award4-title">Green Enterprise Medal</h3>
+                        <p data-i18n="award4-desc">Awarded for integrating 100% certified eco-friendly and organic supply chain solutions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Client Reviews -->
+        <section class="reviews-section reveal" style="padding: 5rem 5%; background: rgba(0,0,0,0.02);">
+            <div class="container" style="max-width: 1200px; margin: 0 auto;">
+                <h2 class="section-title text-center" data-i18n="bc-rev-title">Executive <span class="highlight">Testimonials</span></h2>
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="review-quote">"</div>
+                        <p class="review-text" data-i18n="bc-rev-1">"Suntech Solutions provided the strategic clarity we desperately needed. Their advisory transformed our operational efficiency."</p>
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">R</div>
+                            <div class="reviewer-details">
+                                <h4>Robert K.</h4>
+                                <p data-i18n="bc-rev-role">CEO, Global Logistics</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-quote">"</div>
+                        <p class="review-text" data-i18n="bc-rev-2">"An incredible partnership. Their insights into financial risk management saved us millions during the market downturn."</p>
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">E</div>
+                            <div class="reviewer-details">
+                                <h4>Elena G.</h4>
+                                <p data-i18n="bc-rev-role2">CFO, Apex Holdings</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+        <footer class="new_footer_area bg_color">
+        <div class="new_footer_top">
+            <div class="container">
+                <div class="row">
+                    <!-- Get in Touch Widget (Newsletter Form) -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s">
+                            <h3 class="f-title f_600 t_color f_size_18" data-i18n="nav-contact">Contact Us</h3>
+                            <p data-i18n="footer-nl-desc">Subscribe to our newsletter to get the latest updates and industry insights.</p>
+                            <form action="#" class="f_subscribe_two mailchimp" method="post" novalidate="true" _lpchecked="1">
+                                <input type="text" name="EMAIL" class="form-control memail" placeholder="Email Address" data-i18n-placeholder="footer-nl-ph">
+                                <button class="btn btn_get btn_get_two" type="submit" data-i18n="footer-subscribe">Subscribe</button>
+                                <p class="mchimp-errmessage" style="display: none;"></p>
+                                <p class="mchimp-sucmessage" style="display: none;"></p>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <!-- Our Divisions Widget -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.4s">
+                            <h3 class="f-title f_600 t_color f_size_18" data-i18n="footer-div">Our Divisions</h3>
+                            <ul class="list-unstyled f_list">
+                                <li><a href="ecommerce.html" target="_blank">Arshith Fresh</a></li>
+                                <li><a href="it-services.html" target="_blank">Arshith Infotech</a></li>
+                                <li><a href="business-consulting.html" target="_blank">Suntech Solutions</a></li>
+                                <li><a href="#">Global Investments</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Quick Links Widget -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.6s">
+                            <h3 class="f-title f_600 t_color f_size_18" data-i18n="footer-ql">Quick Links</h3>
+                            <ul class="list-unstyled f_list">
+                                <li><a href="index.html#about" data-i18n="nav-about">About Us</a></li>
+                                <li><a href="index.html#business" data-i18n="nav-business">Businesses</a></li>
+                                <li><a href="index.html#careers" data-i18n="nav-careers">Careers</a></li>
+                                <li><a href="index.html#contact" data-i18n="nav-contact">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Widget -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s">
+                            <h3 class="f-title f_600 t_color f_size_18" data-i18n="footer-social">Follow Us</h3>
+                            <div class="f_social_icon">
+                                <a href="https://www.linkedin.com/company/arshith-fresh-india-pvt-ltd/?originalSubdomain=in" target="_blank" rel="noopener noreferrer" class="fab fa-linkedin" aria-label="LinkedIn"></a>
+                                <a href="#" class="fab fa-facebook-f" aria-label="Facebook"></a>
+                                <a href="#" class="fab fa-twitter" aria-label="Twitter"></a>
+                                <a href="#" class="fab fa-instagram" aria-label="Instagram"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Animated Background Beetle & Cyclist -->
+            <div class="footer_bg">
+                <div class="footer_bg_one"><div class="car-logo">Let’s start with Arshit<span>.</span></div></div>
+                <div class="footer_bg_two"><div class="cyclist-logo">Others</div></div>
+            </div>
+        </div>
+        
+        <!-- Copyright Bottom -->
+        <div class="footer_bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <p class="mb-0 f_400" data-i18n="footer-copy">&copy; 2026 Arshit Group of Industries. All rights reserved.</p>
+                    </div>
+                    <div class="col-lg-6 text-right">
+                        <p>Made with <i class="fa fa-heart" style="color: var(--primary-color);"></i> by <a href="#" style="color: var(--primary-color); text-decoration: none; font-weight: 600;">Arshit Tech Labs</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="translations.js"></script>
+    <script>
+
+
+        // --- Scroll Reveal Animation ---
+        const revealElements = document.querySelectorAll('.reveal');
+        
+        const revealOptions = {
+            root: null,
+            threshold: 0.15, // Trigger when 15% is visible
+            rootMargin: "0px 0px -50px 0px" // Slightly before it fully enters
+        };
+        
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    // Stop observing once revealed so it doesn't fade out when scrolling up
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, revealOptions);
+        
+        revealElements.forEach(el => {
+            revealObserver.observe(el);
+        });
+
+        // --- Kinetic Typography Logic ---
+        const kfRight = document.querySelector('.kf-right');
+        const kfColumns = document.querySelectorAll('.kf-column');
+        const kfTracks = document.querySelectorAll('.kf-text-track');
+        
+        let mouseY = 0;
+        let lerpMouseY = 0;
+        const lerpAmount = 0.05;
+        
+        window.addEventListener('mousemove', (e) => {
+            // Normalize mouse Y position (-1 to 1)
+            mouseY = (e.clientY / window.innerHeight) * 2 - 1;
+        });
+
+        function animateKinetic() {
+            const scrollY = window.pageYOffset;
+            
+            // Smoothly interpolate mouse position
+            lerpMouseY += (mouseY - lerpMouseY) * lerpAmount;
+            
+            kfTracks.forEach((track, index) => {
+                const column = kfColumns[index];
+                const speed = parseFloat(column.getAttribute('data-speed'));
+                
+                // Calculate scroll displacement
+                const scrollOffset = scrollY * speed;
+                
+                // Calculate mouse displacement (parallax)
+                const mouseOffset = lerpMouseY * 50 * (index % 2 === 0 ? 1 : -1);
+                
+                // Combine offsets
+                const totalOffset = scrollOffset + mouseOffset;
+                
+                // Use translate3d for hardware acceleration
+                track.style.transform = `translate3d(-50%, ${totalOffset % 1000}px, 0)`;
+            });
+            
+            requestAnimationFrame(animateKinetic);
+        }
+
+        if (kfRight) {
+            animateKinetic();
+        }
+
+    </script>
+</body>
+</html>

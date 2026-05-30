@@ -1,0 +1,7 @@
+node_modules/
+arshit-backend/node_modules/
+arshit-backend/uploads/
+.env
+.vercel
+*.log
+*.zip
