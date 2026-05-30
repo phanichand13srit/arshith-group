@@ -140,7 +140,7 @@
 
         async function fetchApplications() {
             try {
-                const response = await fetch(`${API_BASE}/api/admin/applications`);
+                const response = await fetch(`${API_BASE}/api/admin/applications?t=${Date.now()}`);
                 currentData = await response.json();
                 renderTable(currentData);
             } catch (error) {

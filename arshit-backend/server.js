@@ -11,6 +11,15 @@ app.use(cors());
 app.use(express.json()); // Parses JSON data
 app.use(express.urlencoded({ extended: true }));
 
+// Disable caching for API endpoints (both browser and edge CDN proxy cache)
+app.use((req, res, next) => {
+    res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+    res.setHeader('Pragma', 'no-cache');
+    res.setHeader('Expires', '0');
+    res.setHeader('Surrogate-Control', 'no-store');
+    next();
+});
+
 // Ensure uploads folder exists (dynamically configured for local and Vercel)
 let uploadsDir = path.join(__dirname, 'uploads');
 if (process.env.VERCEL) {
