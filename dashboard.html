@@ -132,11 +132,15 @@
             window.location.href = 'login.html';
         }
 
+        const API_BASE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.protocol === 'file:' 
+            ? 'http://localhost:3000' 
+            : '';
+
         let currentData = [];
 
         async function fetchApplications() {
             try {
-                const response = await fetch('http://localhost:3000/api/admin/applications');
+                const response = await fetch(`${API_BASE}/api/admin/applications`);
                 currentData = await response.json();
                 renderTable(currentData);
             } catch (error) {
@@ -163,7 +167,7 @@
                         <td>${app.email}</td>
                         <td>${app.phone}</td>
                         <td><span class="status-badge">${app.role}</span></td>
-                        <td><a href="http://localhost:3000/${app.resume_path}" target="_blank" class="view-btn">View PDF</a></td>
+                        <td><a href="${API_BASE}/${app.resume_path}" target="_blank" class="view-btn">View PDF</a></td>
                         <td><div style="max-width: 200px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="${app.why_join}">${app.why_join || 'N/A'}</div></td>
                     </tr>
                 `;

@@ -762,6 +762,10 @@
         });
 
         // --- Contact Form Submission Logic ---
+        const API_BASE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.protocol === 'file:' 
+            ? 'http://localhost:3000' 
+            : '';
+
         const contactForm = document.getElementById('contactForm');
         
         if (contactForm) {
@@ -773,7 +777,7 @@
                 const data = Object.fromEntries(formData.entries());
                 
                 try {
-                    const response = await fetch('http://localhost:3000/api/contact', {
+                    const response = await fetch(`${API_BASE}/api/contact`, {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'

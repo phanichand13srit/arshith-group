@@ -11,12 +11,18 @@ const app = express();
 app.use(cors());
 app.use(express.json()); // Parses JSON data
 app.use(express.urlencoded({ extended: true }));
-app.use('/uploads', express.static(path.join(__dirname, 'uploads'))); // Serves uploaded resumes publicly
-
-// Ensure uploads folder exists
-if (!fs.existsSync(path.join(__dirname, 'uploads'))) {
-    fs.mkdirSync(path.join(__dirname, 'uploads'));
+// Ensure uploads folder exists (dynamically configured for local and Vercel)
+let uploadsDir = path.join(__dirname, 'uploads');
+if (process.env.VERCEL) {
+    uploadsDir = path.join('/tmp', 'uploads');
 }
+
+if (!fs.existsSync(uploadsDir)) {
+    fs.mkdirSync(uploadsDir, { recursive: true });
+}
+
+app.use('/uploads', express.static(uploadsDir)); // Serves uploaded resumes publicly
+app.use('/api/uploads', express.static(uploadsDir)); // Serves uploaded resumes under Vercel API routing
 
 // Database Connection Setup (SQLite optimized for local and Vercel)
 let dbPath = path.join(__dirname, 'arshith_group_db.db');
@@ -113,7 +119,7 @@ function seedAdmin() {
 // Configure File Uploads (Multer) - Only allow PDFs and keep extension
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, path.join(__dirname, 'uploads/'));
+        cb(null, uploadsDir);
     },
     filename: function (req, file, cb) {
         const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
@@ -156,7 +162,7 @@ app.post('/api/contact', (req, res) => {
 // 2. Endpoint for Internship Application (with Resume Upload)
 app.post('/api/apply', upload.single('resumeUpload'), (req, res) => {
     const { fullName, email, phone, internshipRole, coverLetter } = req.body;
-    const resumePath = req.file ? 'arshit-backend/uploads/' + req.file.filename : null; 
+    const resumePath = req.file ? 'api/uploads/' + req.file.filename : null; 
     
     // Find the role_id from internship_roles table using the key from frontend
     const findRoleQuery = 'SELECT id FROM internship_roles WHERE role_key = ?';
