@@ -1,0 +1,11 @@
+{
+  "name": "arshith-group-task6",
+  "version": "1.0.0",
+  "description": "Root package config for Arshith Group Task 6 Website and Vercel routing",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "multer": "^2.1.1",
+    "sqlite3": "^5.1.7"
+  }
+}
