@@ -295,8 +295,8 @@ body.light-mode .dropdown-menu a:hover {
     max-width: 900px;
     width: 90%;
     padding: 4.5rem 3.5rem !important;
-    opacity: 0;
-    transform: translateY(40px);
+    opacity: 1;
+    transform: translateY(0);
     transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
     background: linear-gradient(135deg, rgba(2, 6, 23, 0.88), rgba(2, 6, 23, 0.8));
     backdrop-filter: blur(20px);
