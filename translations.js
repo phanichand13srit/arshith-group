@@ -786,22 +786,37 @@ document.addEventListener('DOMContentLoaded', () => {
                 }, 30);
             }
             
+            let resumeTimeout;
+            
+            function pauseAutoScroll(duration) {
+                isPaused = true;
+                clearTimeout(resumeTimeout);
+                resumeTimeout = setTimeout(() => {
+                    isPaused = false;
+                }, duration);
+            }
+            
             // Interaction handlers (Touch & Mouse)
-            container.addEventListener('mouseenter', () => isPaused = true);
-            container.addEventListener('mouseleave', () => isPaused = false);
-            container.addEventListener('touchstart', () => isPaused = true, { passive: true });
+            container.addEventListener('mouseenter', () => {
+                isPaused = true;
+                clearTimeout(resumeTimeout);
+            });
+            container.addEventListener('mouseleave', () => {
+                pauseAutoScroll(3000);
+            });
+            container.addEventListener('touchstart', () => {
+                isPaused = true;
+                clearTimeout(resumeTimeout);
+            }, { passive: true });
             container.addEventListener('touchend', () => {
-                // Pause for 2 seconds after user releases finger before resuming auto-scroll
-                setTimeout(() => { isPaused = false; }, 2000);
+                // Keep the break for 10 seconds after touch ends so readers have ample time
+                pauseAutoScroll(10000);
             });
             
             // Actively pause on manual scrolling
             container.addEventListener('scroll', () => {
-                isPaused = true;
-                clearTimeout(container.scrollTimeout);
-                container.scrollTimeout = setTimeout(() => {
-                    isPaused = false;
-                }, 3000);
+                // Keep the break for 12 seconds when a swipe or scroll is in progress
+                pauseAutoScroll(12000);
             });
             
             startScroll();
