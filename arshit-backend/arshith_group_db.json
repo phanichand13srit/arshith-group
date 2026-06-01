@@ -1,0 +1,33 @@
+{
+    "contacts": [],
+    "internship_roles": [
+        {
+            "id": 1,
+            "role_key": "software-dev-intern-3",
+            "role_display_name": "Software & Web Development Intern - 3 Months"
+        },
+        {
+            "id": 2,
+            "role_key": "software-dev-intern-6",
+            "role_display_name": "Software & Web Development Intern - 6 Months"
+        },
+        {
+            "id": 3,
+            "role_key": "ecommerce-ops-intern-3",
+            "role_display_name": "E-Commerce Operations Intern - 3 Months"
+        },
+        {
+            "id": 4,
+            "role_key": "ecommerce-ops-intern-6",
+            "role_display_name": "E-Commerce Operations Intern - 6 Months"
+        }
+    ],
+    "applications": [],
+    "admins": [
+        {
+            "id": 1,
+            "username": "admin",
+            "password": "admin123"
+        }
+    ]
+}

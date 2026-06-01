@@ -3,7 +3,7 @@ import shutil
 
 # Source and destination paths
 src_dir = r"C:\Users\Phani Chand\.gemini\antigravity\brain\06f6ab38-b490-441c-b659-03c0daa7ddbd"
-dest_dir = r"c:\Users\Phani Chand\OneDrive\Desktop\15-05-2026 task 6 (updated) phanichand\images"
+dest_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "images")
 
 # Image mappings (source filename -> destination filename)
 image_mappings = {
