@@ -397,7 +397,7 @@ body.light-mode .hero-content {
 }
 
 body.light-mode .hamburger-line {
-    background-color: var(--text-dark);
+    background-color: #0f172a;
 }
 
 .hamburger-btn.active .hamburger-line:nth-child(1) {
@@ -6115,6 +6115,10 @@ body.light-mode .about-glow-blob {
     box-shadow: 0 10px 30px rgba(0, 255, 136, 0.15) !important;
 }
 
+/* Hide cloned theme toggle on desktop by default to avoid duplicate buttons */
+.mobile-theme-toggle {
+    display: none !important;
+}
 
 /* ==========================================================================
    Modern Advanced Mobile responsive Overrides & Optimizations
