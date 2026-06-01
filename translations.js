@@ -642,11 +642,20 @@ const translations = {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
+    // --- Unified Theme Sync Function ---
+    function syncThemeUI(isLight) {
+        const sunIcons = document.querySelectorAll('.sun-icon');
+        const moonIcons = document.querySelectorAll('.moon-icon');
+        sunIcons.forEach(icon => icon.style.display = isLight ? 'none' : 'block');
+        moonIcons.forEach(icon => icon.style.display = isLight ? 'block' : 'none');
+    }
+
     // --- Mobile Menu Dynamically Injected & Handled ---
     const headerContainer = document.querySelector('.header-container');
     const navList = document.querySelector('.nav-list');
     
     if (headerContainer && navList) {
+        // 1. Create Hamburger Button
         let hamburger = document.querySelector('.hamburger-btn');
         if (!hamburger) {
             hamburger = document.createElement('button');
@@ -660,6 +669,28 @@ document.addEventListener('DOMContentLoaded', () => {
             headerContainer.appendChild(hamburger);
         }
         
+        // 2. Clone Theme Toggle for Mobile Header (Always Visible)
+        const themeToggle = document.getElementById('theme-toggle');
+        if (themeToggle) {
+            let mobileThemeToggle = headerContainer.querySelector('.mobile-theme-toggle');
+            if (!mobileThemeToggle) {
+                mobileThemeToggle = themeToggle.cloneNode(true);
+                mobileThemeToggle.id = 'mobile-theme-toggle';
+                mobileThemeToggle.className = 'theme-btn mobile-theme-toggle';
+                // Insert it before the hamburger button
+                headerContainer.insertBefore(mobileThemeToggle, hamburger);
+                
+                // Bind click event
+                mobileThemeToggle.addEventListener('click', () => {
+                    document.body.classList.toggle('light-mode');
+                    const isLight = document.body.classList.contains('light-mode');
+                    localStorage.setItem('selectedTheme', isLight ? 'light' : 'dark');
+                    syncThemeUI(isLight);
+                });
+            }
+        }
+        
+        // Toggle mobile menu drawer
         hamburger.addEventListener('click', (e) => {
             e.stopPropagation();
             hamburger.classList.toggle('active');
@@ -672,6 +703,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
         
+        // Close menu on clicking outside
         document.addEventListener('click', (e) => {
             if (navList.classList.contains('active') && !navList.contains(e.target) && !hamburger.contains(e.target)) {
                 hamburger.classList.remove('active');
@@ -680,6 +712,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
         
+        // Dropdown toggle on mobile
         const dropdowns = document.querySelectorAll('.nav-item.dropdown');
         dropdowns.forEach(dropdown => {
             const link = dropdown.querySelector('a');
@@ -703,36 +736,99 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- Dynamic Portfolio Match visualizer move on Mobile ---
+    const mcMenuItems = document.querySelectorAll('.mc-menu-item');
+    
+    function handleMobilePortfolio() {
+        if (!mcMenuItems || mcMenuItems.length === 0) return;
+        const isMobile = window.innerWidth <= 768;
+        mcMenuItems.forEach(item => {
+            const target = item.getAttribute('data-target');
+            const previewSlide = document.getElementById(`preview-${target}`);
+            if (previewSlide) {
+                if (isMobile) {
+                    const itemBody = item.querySelector('.mc-item-body');
+                    if (itemBody && !itemBody.contains(previewSlide)) {
+                        itemBody.appendChild(previewSlide);
+                    }
+                } else {
+                    const visualizer = document.querySelector('.court-visualizer-container');
+                    if (visualizer && !visualizer.contains(previewSlide)) {
+                        visualizer.appendChild(previewSlide);
+                    }
+                }
+            }
+        });
+    }
+    
+    // Run portfolio move on load and on resize
+    handleMobilePortfolio();
+    window.addEventListener('resize', handleMobilePortfolio);
+
+    // --- Smooth Auto Scroll Swipe Carousels for Reviews and News ---
+    function enableCarouselAutoScroll(selector) {
+        const containers = document.querySelectorAll(selector);
+        containers.forEach(container => {
+            let scrollInterval;
+            let isPaused = false;
+            const scrollAmount = 1; // Scroll speed pixels
+            
+            function startScroll() {
+                clearInterval(scrollInterval);
+                scrollInterval = setInterval(() => {
+                    if (!isPaused && window.innerWidth <= 768) {
+                        container.scrollLeft += scrollAmount;
+                        // Seamless reset when end is reached
+                        if (container.scrollLeft >= (container.scrollWidth - container.clientWidth - 2)) {
+                            container.scrollLeft = 0;
+                        }
+                    }
+                }, 30);
+            }
+            
+            // Interaction handlers (Touch & Mouse)
+            container.addEventListener('mouseenter', () => isPaused = true);
+            container.addEventListener('mouseleave', () => isPaused = false);
+            container.addEventListener('touchstart', () => isPaused = true, { passive: true });
+            container.addEventListener('touchend', () => {
+                // Pause for 2 seconds after user releases finger before resuming auto-scroll
+                setTimeout(() => { isPaused = false; }, 2000);
+            });
+            
+            // Actively pause on manual scrolling
+            container.addEventListener('scroll', () => {
+                isPaused = true;
+                clearTimeout(container.scrollTimeout);
+                container.scrollTimeout = setTimeout(() => {
+                    isPaused = false;
+                }, 3000);
+            });
+            
+            startScroll();
+        });
+    }
+
+    enableCarouselAutoScroll('.reviews-grid');
+    enableCarouselAutoScroll('.news-grid');
+
     // Theme logic
     const themeToggle = document.getElementById('theme-toggle');
-    const sunIcon = document.querySelector('.sun-icon');
-    const moonIcon = document.querySelector('.moon-icon');
-    
     const currentTheme = localStorage.getItem('selectedTheme') || 'light';
-    if (currentTheme === 'dark') {
-        document.body.classList.remove('light-mode');
-        if (sunIcon) sunIcon.style.display = 'block';
-        if (moonIcon) moonIcon.style.display = 'none';
-    } else {
+    const isLightDefault = currentTheme === 'light';
+    
+    if (isLightDefault) {
         document.body.classList.add('light-mode');
-        if (sunIcon) sunIcon.style.display = 'none';
-        if (moonIcon) moonIcon.style.display = 'block';
+    } else {
+        document.body.classList.remove('light-mode');
     }
+    syncThemeUI(isLightDefault);
 
     if (themeToggle) {
         themeToggle.addEventListener('click', () => {
             document.body.classList.toggle('light-mode');
             const isLight = document.body.classList.contains('light-mode');
-            
             localStorage.setItem('selectedTheme', isLight ? 'light' : 'dark');
-            
-            if (isLight) {
-                if (sunIcon) sunIcon.style.display = 'none';
-                if (moonIcon) moonIcon.style.display = 'block';
-            } else {
-                if (sunIcon) sunIcon.style.display = 'block';
-                if (moonIcon) moonIcon.style.display = 'none';
-            }
+            syncThemeUI(isLight);
         });
     }
 
