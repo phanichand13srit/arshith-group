@@ -642,6 +642,67 @@ const translations = {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
+    // --- Mobile Menu Dynamically Injected & Handled ---
+    const headerContainer = document.querySelector('.header-container');
+    const navList = document.querySelector('.nav-list');
+    
+    if (headerContainer && navList) {
+        let hamburger = document.querySelector('.hamburger-btn');
+        if (!hamburger) {
+            hamburger = document.createElement('button');
+            hamburger.className = 'hamburger-btn';
+            hamburger.setAttribute('aria-label', 'Toggle Menu');
+            hamburger.innerHTML = `
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            `;
+            headerContainer.appendChild(hamburger);
+        }
+        
+        hamburger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            hamburger.classList.toggle('active');
+            navList.classList.toggle('active');
+            
+            if (navList.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        });
+        
+        document.addEventListener('click', (e) => {
+            if (navList.classList.contains('active') && !navList.contains(e.target) && !hamburger.contains(e.target)) {
+                hamburger.classList.remove('active');
+                navList.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+        
+        const dropdowns = document.querySelectorAll('.nav-item.dropdown');
+        dropdowns.forEach(dropdown => {
+            const link = dropdown.querySelector('a');
+            if (link) {
+                link.addEventListener('click', (e) => {
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        
+                        // Close other dropdowns
+                        dropdowns.forEach(other => {
+                            if (other !== dropdown) {
+                                other.classList.remove('active');
+                            }
+                        });
+                        
+                        dropdown.classList.toggle('active');
+                    }
+                });
+            }
+        });
+    }
+
     // Theme logic
     const themeToggle = document.getElementById('theme-toggle');
     const sunIcon = document.querySelector('.sun-icon');
