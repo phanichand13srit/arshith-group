@@ -6120,6 +6120,15 @@ body.light-mode .about-glow-blob {
     display: none !important;
 }
 
+/* Remove 10-second hero animation delay on all internship and internship-related pages in both desktop and mobile views */
+.hero-section.has-parallax-bg .hero-content {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    visibility: visible !important;
+    animation: none !important;
+    animation-delay: 0s !important;
+}
+
 /* ==========================================================================
    Modern Advanced Mobile responsive Overrides & Optimizations
    ========================================================================== */
