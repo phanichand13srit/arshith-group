@@ -6274,8 +6274,64 @@ body.light-mode .about-glow-blob {
     }
 
     /* 7. Carousel continuous scrolling tweak: disable snaps to allow pixel-by-pixel scrolling */
-    .reviews-grid, .news-grid {
+    .reviews-grid, .news-grid, .timeline-container, .premium-timeline {
         scroll-snap-type: none !important;
+    }
+
+    /* 8. Horizontal Timeline Carousel Overrides for mobile viewports */
+    .timeline-line-track, 
+    .timeline-line, 
+    .timeline-bullet, 
+    .timeline-glow-point {
+        display: none !important;
+    }
+    
+    .timeline-container, 
+    .premium-timeline {
+        display: flex !important;
+        flex-direction: row !important;
+        overflow-x: auto !important;
+        gap: 1.25rem !important;
+        padding: 1.5rem 0.5rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        scrollbar-width: none;
+        position: relative;
+    }
+    
+    .timeline-container::-webkit-scrollbar, 
+    .premium-timeline::-webkit-scrollbar {
+        display: none !important;
+    }
+    
+    .timeline-node {
+        flex: 0 0 82% !important;
+        width: 82% !important;
+        margin-bottom: 0 !important;
+        opacity: 1 !important;
+        transform: none !important;
+        display: block !important;
+        padding-left: 0 !important;
+    }
+    
+    .timeline-node:nth-child(even) {
+        flex-direction: row !important;
+    }
+    
+    .timeline-content-card, 
+    .about-company-card {
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding: 1.75rem 1.5rem !important;
+        transform: none !important;
+        display: block !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+    }
+    
+    body.light-mode .timeline-content-card, 
+    body.light-mode .about-company-card {
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02) !important;
     }
 }
 

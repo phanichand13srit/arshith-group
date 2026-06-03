@@ -825,6 +825,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     enableCarouselAutoScroll('.reviews-grid');
     enableCarouselAutoScroll('.news-grid');
+    enableCarouselAutoScroll('.timeline-container');
+    enableCarouselAutoScroll('.premium-timeline');
 
     // Theme logic
     const themeToggle = document.getElementById('theme-toggle');
