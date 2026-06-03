@@ -6314,6 +6314,10 @@ body.light-mode .about-glow-blob {
         padding-left: 0 !important;
     }
     
+    .timeline-node > div:not(.timeline-content-card) {
+        display: none !important;
+    }
+    
     .timeline-node:nth-child(even) {
         flex-direction: row !important;
     }
