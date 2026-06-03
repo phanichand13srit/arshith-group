@@ -1,3 +1,5 @@
+console.log("translations.js script loaded.");
+
 const translations = {
     "en": {
         "nav-home": "Home",
@@ -642,6 +644,7 @@ const translations = {
 };
 
 function initMobileAndTranslations() {
+    console.log("initMobileAndTranslations executed.");
     // --- Unified Theme Sync Function ---
     function syncThemeUI(isLight) {
         const sunIcons = document.querySelectorAll('.sun-icon');
@@ -653,6 +656,7 @@ function initMobileAndTranslations() {
     // --- Mobile Menu Dynamically Injected & Handled ---
     const headerContainer = document.querySelector('.header-container');
     const navList = document.querySelector('.nav-list');
+    console.log("headerContainer:", headerContainer, "navList:", navList);
     
     if (headerContainer && navList) {
         // 1. Create Hamburger Button
