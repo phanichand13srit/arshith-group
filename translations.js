@@ -641,7 +641,7 @@ const translations = {
     }
 };
 
-document.addEventListener('DOMContentLoaded', () => {
+function initMobileAndTranslations() {
     // --- Unified Theme Sync Function ---
     function syncThemeUI(isLight) {
         const sunIcons = document.querySelectorAll('.sun-icon');
@@ -919,4 +919,10 @@ document.addEventListener('DOMContentLoaded', () => {
             videoObserver.observe(section);
         }
     });
-});
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMobileAndTranslations);
+} else {
+    initMobileAndTranslations();
+}
