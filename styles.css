@@ -1572,7 +1572,11 @@ body:not(.light-mode) .explore-btn:hover {
 
 @media (max-width: 640px) {
     .team-matrix {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+    .profile-card {
+        padding: 0.5rem;
     }
 }
 
